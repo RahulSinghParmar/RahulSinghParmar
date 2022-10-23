@@ -15,15 +15,15 @@
 
 - 🤝 I’m looking for help with **////**
 
-- 👨‍💻 All of my projects are available at [here](https://cs50.simple.ink/sites-and-projects-012188b8c7554a7ca4ec81d7c6931917)
+- 👨‍💻 All of my projects are available at [https://cs50.simple.ink/sites-and-projects-012188b8c7554a7ca4ec81d7c6931917](https://cs50.simple.ink/sites-and-projects-012188b8c7554a7ca4ec81d7c6931917)
 
-- 📝 I regularly write articles on [here](https://cs50.simple.ink/)
+- 📝 I regularly write articles on [https://cs50.simple.ink/](https://cs50.simple.ink/)
 
 - 💬 Ask me about **JAVA, Python, Django**
 
 - 📫 How to reach me **rahulsinghparmar4@gmail.com**
 
-- 📄 Know about my experiences [here](https://cs50.simple.ink/contact-3dd84406ed604acb91c486b5d8493d7f)
+- 📄 Know about my experiences [https://cs50.simple.ink/contact-3dd84406ed604acb91c486b5d8493d7f](https://cs50.simple.ink/contact-3dd84406ed604acb91c486b5d8493d7f)
 
 - ⚡ Fun fact **I'm a SportsMan**
 
