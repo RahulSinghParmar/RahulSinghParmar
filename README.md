@@ -63,3 +63,12 @@
 <p>&nbsp;&nbsp;<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rahulsinghparmar&" alt="rahulsinghparmar" /></p>
 
 </details>
+
+<details>
+  <summary>:zap: Recent GitHub Activity</summary>
+  
+<!--START_SECTION:activity-->
+
+<!--END_SECTION:activity-->
+
+</details>
