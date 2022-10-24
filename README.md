@@ -27,13 +27,9 @@
 
 - ⚡ Fun fact **I'm a SportsMan**
 
----
-
 ### Spotify Playing 🎧
 
 &nbsp;[![Spotify](https://novatorem-psi-six.vercel.app/api/spotify?background_color=000000&border_color=ffffff)](https://open.spotify.com/user/ac5f94de8d0f49e49fb8a8e494518dd4a)
-
----
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
