@@ -12,6 +12,5 @@ jobs:
     steps:
     - name: GitHub - Activity - Readme
     - uses: jamesgeorge007/github-activity-readme@v0.3.6
-
-        env:
-          GITHUB_TOKEN: ${{ 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.GITHUB_TOKEN }}
+      env:
+      GITHUB_TOKEN: ${{ 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.GITHUB_TOKEN }}
