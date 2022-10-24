@@ -29,6 +29,12 @@
 
 ---
 
+### Spotify Playing 🎧
+
+&nbsp;[![Spotify](https://novatorem-psi-six.vercel.app/api/spotify?background_color=000000&border_color=ffffff)](https://open.spotify.com/user/ac5f94de8d0f49e49fb8a8e494518dd4a)
+
+---
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://codepen.io/rahulsinghparmar" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="rahulsinghparmar" height="30" width="40" /></a>
@@ -52,7 +58,8 @@
 <details>
     <summary>:zap: Github Stats</summary>
 
-<p>&nbsp;&nbsp;<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=rahulsinghparmar&show_icons=true&locale=en&layout=compact" alt="rahulsinghparmar" /></p>
+&nbsp;
+<p>&nbsp;&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=rahulsinghparmar&show_icons=true&locale=en&layout=compact" alt="rahulsinghparmar" /></p>
 
 <p>&nbsp;&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=rahulsinghparmar&show_icons=true&locale=en" alt="rahulsinghparmar" /></p>
 
@@ -64,8 +71,6 @@
   <summary>:zap: Recent GitHub Activity</summary>
   
 <!--START_SECTION:waka-->
-
-**🐱 My GitHub Data**
 
 <!--END_SECTION:waka-->
 
