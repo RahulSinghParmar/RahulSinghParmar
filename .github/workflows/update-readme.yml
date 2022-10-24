@@ -1,16 +1,16 @@
-name: Update README
+name: GitHub - Activity - Readme
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: GitHub - Activity - Readme
-    - uses: jamesgeorge007/github-activity-readme@v0.3.6
-      env:
-      GITHUB_TOKEN: ${{ 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.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - uses: jamesgeorge007/github-activity-readme@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
