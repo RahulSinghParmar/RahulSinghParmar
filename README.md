@@ -67,7 +67,7 @@
   <summary>:zap: Recent GitHub Activity</summary>
 
 <!--START_SECTION:activity-->
-
+1. ❌ Closed PR [#1](https://github.com/RahulSinghParmar/JAVA-Core/pull/1) in [RahulSinghParmar/JAVA-Core](https://github.com/RahulSinghParmar/JAVA-Core)
 <!--END_SECTION:activity-->
 
 </details>
