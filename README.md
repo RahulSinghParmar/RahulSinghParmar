@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm
 
-[Rahul Singh Parmar][https://rahulsinghparmar.github.io/RahulSinghParmar/]
+[Rahul Singh Parmar](https://rahulsinghparmar.github.io/RahulSinghParmar/)
 </h1>
 <h3 align="center">A passionate Software developer from India</h3>
 
