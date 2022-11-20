@@ -70,7 +70,7 @@
   <summary>:zap: Recent GitHub Activity</summary>
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#95](https://github.com/Evavic44/Eke/pull/95) in [Evavic44/Eke](https://github.com/Evavic44/Eke)
+1. ❌ Closed PR [#95](https://github.com/Evavic44/Eke/pull/95) in [Evavic44/Eke](https://github.com/Evavic44/Eke)
 <!--END_SECTION:activity-->
 
 </details>
