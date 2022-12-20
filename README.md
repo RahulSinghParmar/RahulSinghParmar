@@ -70,7 +70,7 @@
   <summary>:zap: Recent GitHub Activity</summary>
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#1](https://github.com/RahulSinghParmar/Portfolio/pull/1) in [RahulSinghParmar/Portfolio](https://github.com/RahulSinghParmar/Portfolio)
+1. 🎉 Merged PR [#3](https://github.com/RahulSinghParmar/Portfolio/pull/3) in [RahulSinghParmar/Portfolio](https://github.com/RahulSinghParmar/Portfolio)
 <!--END_SECTION:activity-->
 
 </details>
