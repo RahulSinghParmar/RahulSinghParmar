@@ -151,7 +151,12 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <a href="https://app.daily.dev/rahulsinghparmar"><img src="https://img.shields.io/badge/daily-profile-151618?style=for-the-badge"></a>
 
 <!-- HASHNODE:START -->
-
+- [C Programming](https://rahulsinghparmar.hashnode.dev/c-programming)
+- [What is JAVA](https://rahulsinghparmar.hashnode.dev/what-is-java)
+- [Programming](https://rahulsinghparmar.hashnode.dev/programming)
+- [Web Development](https://rahulsinghparmar.hashnode.dev/web-development)
+- [Security](https://rahulsinghparmar.hashnode.dev/security)
+- [Multimedia](https://rahulsinghparmar.hashnode.dev/multimedia)
 <!-- HASHNODE:END -->
 
 ## Recent GitHub Activity
