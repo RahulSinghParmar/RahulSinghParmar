@@ -43,14 +43,15 @@ As a highly sociable and energetic person, feel free to DM or ask me any questio
 
 <tr>
 
-<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Word Warrior"><img src="https://rahulsinghparmar.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1638537355656%2FJOMad8cyw.png" width="90px"></a></td>
+<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Word Warrior"><img src="https://rahulsinghparmar.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1638537355656%2FJOMad8cyw.png%3Fauto%3Dcompress&w=256&q=75" width="90px"></a></td>
 
 [//]: # (<td align="center"><a href="https://eke.hashnode.dev/badges" title="Hashnode Hasura Hackathon"><img src="https://user-images.githubusercontent.com/62628408/169521670-1046aabe-7570-413e-a58d-4227bda3054f.png" width="90px"></a></td>)
 
 [//]: # (<td align="center"><a href="https://eke.hashnode.dev/badges" title="Talk of the Town"><img src="https://user-images.githubusercontent.com/62628408/172899535-a6597408-6960-47ae-9343-0ff6fb8645e5.png" width="80px"></a></td>)
 
-[//]: # ()
-[//]: # (<td align="center"><a href="https://google.com"><img src="https://user-images.githubusercontent.com/62628408/168408573-afac9024-904e-4331-9b48-a1fb71d61596.png" width="80px"></a></td>)
+<!-- <td align="center"><a href="https://google.com"><img src="https://user-images.githubusercontent.com/62628408/168408573-afac9024-904e-4331-9b48-a1fb71d61596.png" width="80px"></a></td> -->
+
+<td align="center"><a href="https://learn.microsoft.com/en-us/users/rahulsinghparmar-4681/"><img src="https://learn.microsoft.com/en-us/training/achievements/create-windows-virtual-machine-in-azure.svg" width="80px"></a></td>
 
 [//]: # ()
 [//]: # (<td align="center"><a href="https://dev.to/eke" title="Hacktoberfest 2021"><img src="https://user-images.githubusercontent.com/62628408/168408907-89113177-bbde-4a97-95b6-8e942679ca60.png" width="80px"></a></td>)
@@ -65,13 +66,14 @@ As a highly sociable and energetic person, feel free to DM or ask me any questio
 [//]: # (<td align="center"><a href="https://app.daily.dev/posts/LizSgodjG"><img src="https://user-images.githubusercontent.com/62628408/168409514-dc69ccd4-82df-4194-bf4d-cb49f4c9d250.png" width="70px"></a></td>)
 
 
-<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Self starter"><img src="https://rahulsinghparmar.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1638537321850%2FUSENU8YpT.png" width="80px"></a></td></a>
+<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Self starter"><img src="https://rahulsinghparmar.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1638537321850%2FUSENU8YpT.png%3Fauto%3Dcompress&w=256&q=75" width="80px"></a></td></a>
 
 [//]: # ()
 [//]: # (<td align="center"><a href="https://aviyel.com/@victoreke" title="Early Adopter"><img src="https://user-images.githubusercontent.com/62628408/171622741-81ba6517-8dbd-4da1-ae30-f164e7e920b4.png" width="80px"></a></td></a>)
 
-[//]: # ()
-[//]: # (<td align="center"><a href="https://aviyel.com/@victoreke" title="Platform Contributor"><img src="https://user-images.githubusercontent.com/62628408/171622788-d410d6ea-43fd-4b10-ad79-416be9dad49a.png" width="80px"></a></td></a>)
+<!-- <td align="center"><a href="https://aviyel.com/@victoreke" title="Platform Contributor"><img src="https://user-images.githubusercontent.com/62628408/171622788-d410d6ea-43fd-4b10-ad79-416be9dad49a.png" width="80px"></a></td></a>
+
+<td align="center"><a href="https://aviyel.com/@victoreke" title="Early Adopter"><img src="https://user-images.githubusercontent.com/62628408/171622741-81ba6517-8dbd-4da1-ae30-f164e7e920b4.png" width="80px"></a></td></a> -->
 
 [//]: # ()
 [//]: # (</tr>)
@@ -171,8 +173,7 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <p align="left">
 <a href="https://codepen.io/rahulsinghparmar" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="rahulsinghparmar" height="30" width="40" /></a>
 <a href="https://twitter.com/rahulsingh474" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="rahulsingh474" height="30" width="40" /></a>
-
-[//]: # (<a href="https://linkedin.com/in/rahul-singh-2b27211a7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahul-singh-2b27211a7" height="30" width="40" /></a>)
+<!-- <a href="https://linkedin.com/in/rahul-singh-2b27211a7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahul-singh-2b27211a7" height="30" width="40" /></a> -->
 <a href="https://stackoverflow.com/users/16773813" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="16773813" height="30" width="40" /></a>
 <a href="https://www.youtube.com/channel/UCQf3_Sut9kIqxmp3RcIFFww" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="legion" height="30" width="40" /></a>
 <a href="https://www.codechef.com/users/rahul474" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="rahul474" height="30" width="40" /></a>
