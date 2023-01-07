@@ -150,14 +150,9 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <a href="https://dev.to/rahulsinghparmar"><img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white"></a>
 <a href="https://app.daily.dev/rahulsinghparmar"><img src="https://img.shields.io/badge/daily-profile-151618?style=for-the-badge"></a>
 
+<!-- HASHNODE:START -->
 
-<!-- BLOG-POST-LIST:START -->
-- [How my open source project got 1000 stars on GitHub in 4 months](https://eke.hashnode.dev/how-my-open-source-project-got-1000-stars-on-github-in-4-months)
-- [How open source can boost your career as a developer?](https://eke.hashnode.dev/how-open-source-can-boost-your-career-as-a-developer)
-- [Spekni - A recognition platform built for developer endorsements](https://eke.hashnode.dev/spekni-a-recognition-platform-built-for-developer-endorsements)
-- [How to create a custom 404 page in NextJS](https://eke.hashnode.dev/how-to-create-a-custom-404-page-in-nextjs)
-<!-- BLOG-POST-LIST:END -->
-
+<!-- HASHNODE:END -->
 
 ## Recent GitHub Activity
 <!--START_SECTION:activity-->
