@@ -192,7 +192,7 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <!-- interactive game on contributions-->
 <div align="center">
 
-![snake animation](https://github.com/<seu user name>/<seu user name>/blob/output/github-contribution-grid-snake2.svg)
+![snake animation](https://github.com/RahulSinghParmar/RahulSinghParmar/blob/output/github-contribution-grid-snake2.svg)
 </div>
 
 <img alt="header" src="./assets/header.png">
