@@ -11,4 +11,6 @@ jobs:
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
           max_post_count: "6"
-          feed_list: "https://dev.to/feed/https://dev.to/rahulsinghparmar, https://rahulsinghparmar.hashnode.dev/rss.xml"
+          comment_tag_name: "HASHNODE"
+          commit_message: "Updated readme with the latest Hashnode Blog data"
+          feed_list: "https://rahulsinghparmar.hashnode.dev/rss.xml"
