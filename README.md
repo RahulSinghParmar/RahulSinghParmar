@@ -152,6 +152,10 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 
 
 <!-- BLOG-POST-LIST:START -->
+- [How my open source project got 1000 stars on GitHub in 4 months](https://eke.hashnode.dev/how-my-open-source-project-got-1000-stars-on-github-in-4-months)
+- [How open source can boost your career as a developer?](https://eke.hashnode.dev/how-open-source-can-boost-your-career-as-a-developer)
+- [Spekni - A recognition platform built for developer endorsements](https://eke.hashnode.dev/spekni-a-recognition-platform-built-for-developer-endorsements)
+- [How to create a custom 404 page in NextJS](https://eke.hashnode.dev/how-to-create-a-custom-404-page-in-nextjs)
 <!-- BLOG-POST-LIST:END -->
 
 
