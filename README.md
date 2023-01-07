@@ -142,6 +142,11 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 
 ## Recent GitHub Activity
 <!--START_SECTION:activity-->
+1. 🎉 Merged PR [#1](https://github.com/RahulSinghParmar/resume/pull/1) in [RahulSinghParmar/resume](https://github.com/RahulSinghParmar/resume)
+2. 💪 Opened PR [#1](https://github.com/RahulSinghParmar/resume/pull/1) in [RahulSinghParmar/resume](https://github.com/RahulSinghParmar/resume)
+3. 🎉 Merged PR [#3](https://github.com/RahulSinghParmar/Portfolio/pull/3) in [RahulSinghParmar/Portfolio](https://github.com/RahulSinghParmar/Portfolio)
+4. 💪 Opened PR [#3](https://github.com/RahulSinghParmar/Portfolio/pull/3) in [RahulSinghParmar/Portfolio](https://github.com/RahulSinghParmar/Portfolio)
+5. 🎉 Merged PR [#1](https://github.com/RahulSinghParmar/Portfolio/pull/1) in [RahulSinghParmar/Portfolio](https://github.com/RahulSinghParmar/Portfolio)
 <!--END_SECTION:activity-->
 
 ### Spotify Playing 🎧
