@@ -192,9 +192,7 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <!-- interactive game on contributions-->
 <div align="center">
 
-![github contribution grid snake animation](https://raw.githubusercontent.com/RahulSinghParmar/RahulSinghParmar/output/github-contribution-grid-snake-sissa.svg#gh-dark-mode-only)
-![github contribution grid snake animation](https://raw.githubusercontent.com/RahulSinghParmar/RahulSinghParmar/output/github-contribution-grid-snake-sissa-white.svg#gh-light-mode-only)
-
+![snake animation](https://github.com/<seu user name>/<seu user name>/blob/output/github-contribution-grid-snake2.svg)
 </div>
 
 <img alt="header" src="./assets/header.png">
