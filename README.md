@@ -134,13 +134,13 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 
 <div align="left">
   <!--  Java Core   -->
-  <a href="https://github.com/RahulSinghParmar/JAVA-Core"><img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulSinghParmar&repo=JAVA-Core&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Java-Core"></a>
+  <a href="https://github.com/RahulSinghParmar/JAVA-Core"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=JAVA-Core&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Java-Core"></a>
   <!--  Resume   -->
-  <a href="https://github.com/RahulSinghParmar/resume"><img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulSinghParmar&repo=Resume&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Resume"></a>
+  <a href="https://github.com/RahulSinghParmar/resume"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=Resume&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Resume"></a>
   <!--  my first blog   -->
-  <a href="https://github.com/RahulSinghParmar/my-first-blog"><img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulSinghParmar&repo=my-first-blog&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="my-first-blog"></a>
+  <a href="https://github.com/RahulSinghParmar/my-first-blog"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=my-first-blog&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="my-first-blog"></a>
   <!--  Custom PC Build    -->
-  <a href="https://github.com/RahulSinghParmar/CustomPcBuild"><img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulSinghParmar&repo=CustomPCBuild&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="CustomPCBuild"></a>
+  <a href="https://github.com/RahulSinghParmar/CustomPcBuild"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=CustomPCBuild&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="CustomPCBuild"></a>
 </div>
 
 
@@ -199,8 +199,8 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <diV>
 
   <div align="center">
-    <a href="#"><img alt="Rahul's Github Stats" src="https://github-readme-stats.vercel.app/api?username=RahulSinghParmar&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
-    <a href="#"><img alt="Rahul's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RahulSinghParmar&langs_count=10&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
+    <a href="#"><img alt="Rahul's Github Stats" src="https://github-readme-stats-liart-sigma-73.vercel.app/api?username=RahulSinghParmar&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
+    <a href="#"><img alt="Rahul's Top Languages" src="https://github-readme-stats-liart-sigma-73.vercel.app/api/top-langs/?username=RahulSinghParmar&langs_count=10&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
    <p align="center"> </p>
     <i><b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.</i>
   </div>
