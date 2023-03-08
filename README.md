@@ -43,7 +43,7 @@ As a highly sociable and energetic person, feel free to DM or ask me any questio
 
 <tr>
 
-<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Word Warrior"><img src="https://rahulsinghparmar.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1638537355656%2FJOMad8cyw.png%3Fauto%3Dcompress&w=256&q=75" width="90px"></a></td>
+<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Word Warrior"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638537355656/JOMad8cyw.png?auto=compress" width="90px"></a></td>
 
 [//]: # (<td align="center"><a href="https://eke.hashnode.dev/badges" title="Hashnode Hasura Hackathon"><img src="https://user-images.githubusercontent.com/62628408/169521670-1046aabe-7570-413e-a58d-4227bda3054f.png" width="90px"></a></td>)
 
@@ -66,7 +66,7 @@ As a highly sociable and energetic person, feel free to DM or ask me any questio
 [//]: # (<td align="center"><a href="https://app.daily.dev/posts/LizSgodjG"><img src="https://user-images.githubusercontent.com/62628408/168409514-dc69ccd4-82df-4194-bf4d-cb49f4c9d250.png" width="70px"></a></td>)
 
 
-<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Self starter"><img src="https://rahulsinghparmar.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1638537321850%2FUSENU8YpT.png%3Fauto%3Dcompress&w=256&q=75" width="80px"></a></td></a>
+<td align="center"><a href="https://rahulsinghparmar.hashnode.dev/badges" title="Hashnode Self starter"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1638537321850/USENU8YpT.png?auto=compress" width="80px"></a></td></a>
 
 [//]: # ()
 [//]: # (<td align="center"><a href="https://aviyel.com/@victoreke" title="Early Adopter"><img src="https://user-images.githubusercontent.com/62628408/171622741-81ba6517-8dbd-4da1-ae30-f164e7e920b4.png" width="80px"></a></td></a>)
@@ -134,13 +134,13 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 
 <div align="left">
   <!--  Java Core   -->
-  <a href="https://github.com/RahulSinghParmar/JAVA-Core"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=JAVA-Core&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Java-Core"></a>
+  <a href="https://github.com/RahulSinghParmar/JAVA-Core"><img src="https://github-readme-stats-ivory.vercel.app/api/pin/?username=RahulSinghParmar&repo=JAVA-Core&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Java-Core"></a>
   <!--  Resume   -->
-  <a href="https://github.com/RahulSinghParmar/resume"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=Resume&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Resume"></a>
+  <a href="https://github.com/RahulSinghParmar/resume"><img src="https://github-readme-stats-ivory.vercel.app/api/pin/?username=RahulSinghParmar&repo=Resume&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="Resume"></a>
   <!--  my first blog   -->
-  <a href="https://github.com/RahulSinghParmar/my-first-blog"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=my-first-blog&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="my-first-blog"></a>
+  <a href="https://github.com/RahulSinghParmar/my-first-blog"><img src="https://github-readme-stats-ivory.vercel.app/api/pin/?username=RahulSinghParmar&repo=my-first-blog&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="my-first-blog"></a>
   <!--  Custom PC Build    -->
-  <a href="https://github.com/RahulSinghParmar/CustomPcBuild"><img src="https://github-readme-stats-liart-sigma-73.vercel.app/api/pin/?username=RahulSinghParmar&repo=CustomPCBuild&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="CustomPCBuild"></a>
+  <a href="https://github.com/RahulSinghParmar/CustomPcBuild"><img src="https://github-readme-stats-ivory.vercel.app/api/pin/?username=RahulSinghParmar&repo=CustomPCBuild&theme=react&bg_color=1F222E&title_color=6CD63E&icon_color=0D74E7&hide_border=true&show_icons=true&" alt="CustomPCBuild"></a>
 </div>
 
 
@@ -199,8 +199,8 @@ As a huge fan of open source, all my personal projects live on GitHub. I have bu
 <diV>
 
   <div align="center">
-    <a href="#"><img alt="Rahul's Github Stats" src="https://github-readme-stats-liart-sigma-73.vercel.app/api?username=RahulSinghParmar&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
-    <a href="#"><img alt="Rahul's Top Languages" src="https://github-readme-stats-liart-sigma-73.vercel.app/api/top-langs/?username=RahulSinghParmar&langs_count=10&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
+    <a href="#"><img alt="Rahul's Github Stats" src="https://github-readme-stats-ivory.vercel.app/api?username=RahulSinghParmar&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
+    <a href="#"><img alt="Rahul's Top Languages" src="https://github-readme-stats-ivory.vercel.app/api/top-langs/?username=RahulSinghParmar&langs_count=10&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=5ce1e6&icon_color=5ce1e6" height="200"/></a>
    <p align="center"> </p>
     <i><b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.</i>
   </div>
