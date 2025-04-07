@@ -16,7 +16,7 @@
   <a href="https://www.twitter.com/RahulSingh474" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/twitter/follow/RahulSingh474?logo=twitter&style=for-the-badge&color=0077B5&labelColor=000000">
   </a>
-  <a href="https://www.linkedin.com/in/rahul-singh-2b27211a7">
+  <a href="https://www.linkedin.com/in/rahulsinghparmar4/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
 
