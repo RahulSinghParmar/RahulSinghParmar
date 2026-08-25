@@ -302,6 +302,13 @@ The DNS record still points to the retired edge address. Restore the intended re
 
 <br>
 
+[C Programming](https://rahulsinghparmar.hashnode.dev/c-programming) ·
+[What is JAVA](https://rahulsinghparmar.hashnode.dev/what-is-java) ·
+[Programming](https://rahulsinghparmar.hashnode.dev/programming) ·
+[Web Development](https://rahulsinghparmar.hashnode.dev/web-development)
+
+<br><br>
+
 <details>
 <summary><strong>browse all 8 published notes</strong></summary>
 
