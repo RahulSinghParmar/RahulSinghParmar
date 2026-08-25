@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="238" viewBox="0 0 1000 238" role="img" aria-label="Sanitized homelab architecture and observability path">
+  <title>Sanitized homelab architecture and observability path</title>
+  <rect width="1000" height="238" fill="#0d1117"/>
+  <g font-family="JetBrains Mono, Consolas, monospace">
+    <text x="24" y="28" fill="#39d353" font-size="12">$ homelabctl describe --public</text>
+    <text x="976" y="28" text-anchor="end" fill="#8b949e" font-size="11">Glance · Docker · Nextcloud · Jellyfin · Mattermost</text>
+    <path d="M142 114 H183 M311 114 H352 M480 114 H521 M649 114 H690 M818 114 H859" stroke="#30363d" stroke-width="2" stroke-dasharray="5 5"/>
+    <path id="homelab-packet-path" d="M142 114 H923" fill="none" stroke="none"/>
+    <rect x="14" y="82" width="128" height="64" rx="8" fill="#0d1117" stroke="#30363d"/><text x="78" y="107" text-anchor="middle" fill="#39d353" font-size="12" font-weight="700">EDGE</text><text x="78" y="127" text-anchor="middle" fill="#8b949e" font-size="10">DNS · TLS</text><rect x="183" y="82" width="128" height="64" rx="8" fill="#0d1117" stroke="#30363d"/><text x="247" y="107" text-anchor="middle" fill="#39d353" font-size="12" font-weight="700">ACCESS</text><text x="247" y="127" text-anchor="middle" fill="#8b949e" font-size="10">firewall · VPN</text><rect x="352" y="82" width="128" height="64" rx="8" fill="#0d1117" stroke="#30363d"/><text x="416" y="107" text-anchor="middle" fill="#39d353" font-size="12" font-weight="700">CORE</text><text x="416" y="127" text-anchor="middle" fill="#8b949e" font-size="10">VLAN · routing</text><rect x="521" y="82" width="128" height="64" rx="8" fill="#0d1117" stroke="#30363d"/><text x="585" y="107" text-anchor="middle" fill="#39d353" font-size="12" font-weight="700">COMPUTE</text><text x="585" y="127" text-anchor="middle" fill="#8b949e" font-size="10">Linux · Docker</text><rect x="690" y="82" width="128" height="64" rx="8" fill="#0d1117" stroke="#30363d"/><text x="754" y="107" text-anchor="middle" fill="#39d353" font-size="12" font-weight="700">SERVICES</text><text x="754" y="127" text-anchor="middle" fill="#8b949e" font-size="10">cloud · media</text><rect x="859" y="82" width="128" height="64" rx="8" fill="#0d1117" stroke="#30363d"/><text x="923" y="107" text-anchor="middle" fill="#39d353" font-size="12" font-weight="700">OBSERVE</text><text x="923" y="127" text-anchor="middle" fill="#8b949e" font-size="10">metrics · alerts</text>
+    <circle r="5" fill="#39d353" opacity="0"><animate attributeName="opacity" from="0" to="1" dur=".1s" fill="freeze"/><animateMotion dur="5.5s" repeatCount="indefinite"><mpath href="#homelab-packet-path"/></animateMotion></circle>
+    <text x="24" y="188" fill="#e6edf3" font-size="12">policy: segment → observe → alert → recover → document</text>
+    <text x="24" y="213" fill="#8b949e" font-size="10">public profile exposes architecture—not credentials, addresses, or control actions</text>
+    <text x="976" y="213" text-anchor="end" fill="#39d353" font-size="10">dashboard ↗</text>
+  </g>
+</svg>

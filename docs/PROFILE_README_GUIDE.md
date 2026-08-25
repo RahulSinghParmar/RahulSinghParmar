@@ -6,7 +6,7 @@ The public README deliberately borrows the supplied inspiration profile's strong
 
 - Identity: network and infrastructure lead who also ships weekend development projects.
 - Visual language: GitHub canvas colors, `#39d353` accents, thin borders, monospace interaction details, and restrained animation.
-- Content hierarchy: portrait → `whoami` → toolbox → proof graphs → homelab → activity → selected work → career direction → connect.
+- Content hierarchy: portrait → `whoami` → toolbox → proof graphs → homelab → route challenge → activity → selected work → field notes → career direction → connect.
 - Recruiter story: operations depth first, development evidence second, and cloud/automation trajectory throughout.
 
 ## Responsive and theme behavior
@@ -43,6 +43,7 @@ RahulSinghParmar/
 │   ├── profile-data.json        # last known-good public data snapshot
 │   ├── projects.json            # selected project content
 │   ├── skills.json              # editable self-assessed radar values
+│   ├── blog-posts.json          # last known-good Hashnode RSS snapshot
 │   ├── portrait-{light,dark}.svg
 │   ├── radar-{skills,development}-{light,dark}.svg
 │   ├── card-stats-{light,dark}.svg
@@ -50,6 +51,8 @@ RahulSinghParmar/
 │   ├── achievements-{light,dark}.svg
 │   ├── project-*-{light,dark}.svg
 │   ├── infrastructure-banner-{light,dark}.svg
+│   ├── homelab-map-{light,dark}.svg
+│   ├── blog-latest-{light,dark}.svg
 │   ├── automation-loop-{light,dark}.svg
 │   ├── metrics.isocalendar.svg  # dark/GitHub default name
 │   └── metrics.isocalendar-light.svg
@@ -74,7 +77,7 @@ Render from the checked-in last known-good data snapshot:
 python scripts/build_profile_assets.py
 ```
 
-Refresh public GitHub data and render everything:
+Refresh public GitHub data, the public Hashnode RSS snapshot, and render everything:
 
 ```text
 python scripts/build_profile_assets.py --fetch
@@ -93,8 +96,9 @@ The generator reconstructs transparency from the isolated local source, emits no
 
 | Feature | Source | Failure behavior |
 | --- | --- | --- |
-| Portrait, radars, numbers, languages, achievements, projects | Repository-hosted SVG | Always available with the README |
+| Portrait, radars, numbers, languages, achievements, projects, blog, homelab map | Repository-hosted SVG | Always available with the README |
 | GitHub data refresh | GitHub REST API with built-in token | Three retries, then renders cached snapshot |
+| Hashnode field notes | Public RSS feed; no API key | Three retries, then renders `assets/blog-posts.json` |
 | Contribution calendar | Public contribution API | Three retries; existing checked-in calendar remains visible if refresh fails |
 | Contribution snake | `output` branch | Existing SVG remains available if a scheduled generation fails |
 | Spotify | Theme-matched hosted live SVG | Visible text and link remain if the remote card is temporarily unavailable |
@@ -105,6 +109,7 @@ There are no shared GitHub-stats, streak-stats, trophy, activity-card, or top-la
 ## Automatic versus curated data
 
 - `card-stats`, `languages`, the right-hand development radar's GitHub evidence layer, project metadata, achievements, and the 3D contribution calendar refresh from public GitHub data every 12 hours.
+- `blog-latest` refreshes from the public Hashnode RSS feed in the same scheduled job. No Hashnode API secret is required or stored.
 - The contribution snake refreshes daily on its own workflow and is published to the `output` branch.
 - The left-hand skill radar is self-assessed. Its SVG refreshes automatically whenever `assets/skills.json` changes, but the labels and percentages are deliberately curated rather than inferred from repository bytes.
 - The development trajectory overlays two signals instead of blending them into an ambiguous percentage: curated expertise from `assets/skills.json` and log-scaled GitHub Linguist bytes from original, non-archived repositories.
@@ -115,9 +120,17 @@ There are no shared GitHub-stats, streak-stats, trophy, activity-card, or top-la
 - Only one portrait variant is selected by `<picture>` for the active theme.
 - Core graphs and cards are compact SVG rather than GIF, PNG, or remote rendered screenshots.
 - Stats and languages are generated in one scheduled job instead of requesting several public rendering services on every profile view.
-- Animation is limited to the portrait row reveal, infrastructure packets, the contribution snake, and one automation pulse.
+- Animation is limited to the portrait row reveal, infrastructure and homelab packets, the contribution snake, and one automation pulse.
 - Generated data is committed only when content changes; timestamps are excluded to prevent empty scheduled commits.
 - The profile avoids large responsive tables, decorative screenshots, hidden duplicate sections, and badge walls.
+- The packet-route game uses native `<details>` controls, so it adds no JavaScript, runtime dependency, or page-weight penalty.
+
+## Homelab disclosure policy
+
+- The README publishes a sanitized architecture path, not raw CPU, memory, DNS, filtering, uptime, address, or credential data.
+- `dash.parmar.homes` is linked as a deliberately public observability surface; README rendering does not depend on it.
+- Internal addresses, administrative controls, tokens, VPN membership, and recovery details must remain private.
+- Review the dashboard after every layout or service change to ensure widgets do not reveal new operationally sensitive data.
 
 ## Binary interaction
 
@@ -158,6 +171,7 @@ Before merge, preview GitHub at approximately 360 px, 768 px, and desktop width 
 - Use concise repository descriptions that state the problem and core technology.
 - Keep the same professional name, headline, location, and links across GitHub, LinkedIn, the resume, and portfolio.
 - Publish practical notes about troubleshooting, homelab reliability, AWS networking, vulnerability management, and automation.
+- Keep Hashnode, LinkedIn, X, GitHub, and the portfolio on the same current identity and canonical URLs.
 
 ## Legacy cleanup
 

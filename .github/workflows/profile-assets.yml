@@ -10,6 +10,7 @@ on:
     paths:
       - "assets/projects.json"
       - "assets/skills.json"
+      - "assets/blog-posts.json"
       - "scripts/build_profile_assets.py"
       - "scripts/generate_isocalendar.py"
       - ".github/workflows/profile-assets.yml"
@@ -33,7 +34,7 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Refresh GitHub-backed SVGs
+      - name: Refresh GitHub and Hashnode-backed SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/build_profile_assets.py --fetch
@@ -45,6 +46,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/profile-data.json assets/*.svg
+          git add README.md assets/profile-data.json assets/blog-posts.json assets/*.svg
           git diff --cached --quiet || git commit -m "chore: refresh profile signals"
           git push

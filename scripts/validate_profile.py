@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -18,6 +19,15 @@ ASSETS = ROOT / "assets"
 PRIVATE_SOURCES = {"photo.png", "photome.png", "portrait-cutout-source.png"}
 LEGACY_PATHS = {"index.html", "assets/banner.png", "assets/header.png"}
 REQUIRED_PROJECT_FIELDS = {"repo", "title", "description", "impact", "stack"}
+REQUIRED_BLOG_FIELDS = {"title", "url", "published", "read_minutes"}
+REQUIRED_PUBLIC_LINKS = {
+    "https://rahulsinghparmar.hashnode.dev/",
+    "https://twitter.com/rahulsingh474",
+    "https://www.linkedin.com/in/rahulsinghparmar4/",
+    "https://github.com/RahulSinghParmar",
+    "https://rahulsinghparmar.site",
+    "https://dash.parmar.homes",
+}
 
 
 def check(condition: bool, message: str, errors: list[str]) -> None:
@@ -62,6 +72,9 @@ def main() -> int:
     readme = README.read_text(encoding="utf-8")
 
     check("Team Lead Network Engineer" in readme, "README is missing the recruiter headline", errors)
+    for public_link in REQUIRED_PUBLIC_LINKS:
+        check(public_link in readme, f"README is missing required public link: {public_link}", errors)
+    check("flag{trace_the_whole_path}" in readme, "README packet-route challenge is missing its completion flag", errors)
     check(readme.count("<picture>") == readme.count("</picture>"), "README has an unbalanced <picture> block", errors)
     for block in re.findall(r"<picture>.*?</picture>", readme, flags=re.DOTALL):
         check("<img " in block and "alt=" in block, "every <picture> needs an <img> fallback with alt text", errors)
@@ -90,6 +103,8 @@ def main() -> int:
             "languages",
             "achievements",
             "infrastructure-banner",
+            "homelab-map",
+            "blog-latest",
             "automation-loop",
         ):
             check((ASSETS / f"{stem}-{theme}.svg").is_file(), f"missing theme asset: {stem}-{theme}.svg", errors)
@@ -110,6 +125,37 @@ def main() -> int:
         check(len(repositories) == len(set(repositories)), "project repository names must be unique", errors)
     else:
         errors.append("assets/projects.json must contain a list")
+
+    blog_posts = load_json(ASSETS / "blog-posts.json", errors)
+    if isinstance(blog_posts, list):
+        check(4 <= len(blog_posts) <= 12, "blog snapshot must contain 4-12 posts", errors)
+        blog_urls: list[str] = []
+        published_dates: list[str] = []
+        for index, post in enumerate(blog_posts):
+            check(isinstance(post, dict), f"blog post {index} must be an object", errors)
+            if not isinstance(post, dict):
+                continue
+            check(REQUIRED_BLOG_FIELDS <= post.keys(), f"blog post {index} is missing required fields", errors)
+            url = str(post.get("url", ""))
+            parsed_url = urlsplit(url)
+            check(
+                parsed_url.scheme == "https" and parsed_url.hostname == "rahulsinghparmar.hashnode.dev",
+                f"blog post {index} must use Rahul's HTTPS Hashnode domain",
+                errors,
+            )
+            try:
+                published = str(post.get("published", ""))
+                date.fromisoformat(published)
+                published_dates.append(published)
+            except ValueError:
+                errors.append(f"blog post {index} has an invalid published date")
+            read_minutes = post.get("read_minutes")
+            check(isinstance(read_minutes, int) and read_minutes > 0, f"blog post {index} has an invalid read time", errors)
+            blog_urls.append(url.casefold())
+        check(len(blog_urls) == len(set(blog_urls)), "blog post URLs must be unique", errors)
+        check(published_dates == sorted(published_dates, reverse=True), "blog posts must be newest first", errors)
+    else:
+        errors.append("assets/blog-posts.json must contain a list")
 
     skills = load_json(ASSETS / "skills.json", errors)
     if isinstance(skills, dict) and isinstance(skills.get("skills"), list):
