@@ -61,9 +61,6 @@ def main() -> int:
     errors: list[str] = []
     readme = README.read_text(encoding="utf-8")
 
-    for marker in ("<!-- BLOG-POST-LIST:START -->", "<!-- BLOG-POST-LIST:END -->"):
-        check(readme.count(marker) == 1, f"README must contain exactly one {marker}", errors)
-
     check("Team Lead Network Engineer" in readme, "README is missing the recruiter headline", errors)
     check(readme.count("<picture>") == readme.count("</picture>"), "README has an unbalanced <picture> block", errors)
     for block in re.findall(r"<picture>.*?</picture>", readme, flags=re.DOTALL):

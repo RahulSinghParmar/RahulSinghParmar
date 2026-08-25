@@ -23,7 +23,6 @@
 <a href="https://www.linkedin.com/in/rahulsinghparmar4/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
 <a href="https://github.com/RahulSinghParmar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a>
 <a href="https://github.com/RahulSinghParmar/Portfolio"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&amp;logo=githubpages&amp;logoColor=white" alt="Portfolio"></a>
-<a href="https://rahulsinghparmar.hashnode.dev/"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&amp;logo=hashnode&amp;logoColor=white" alt="Hashnode"></a>
 <img src="https://komarev.com/ghpvc/?username=RahulSinghParmar&amp;style=flat&amp;color=39d353&amp;label=profile+views" alt="Profile views">
 
 </div>
@@ -40,7 +39,7 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 
 - Building **[Home Server Heartbeat](https://github.com/RahulSinghParmar/home-server-heartbeat)** and **[Infrastructure Maintenance Page](https://github.com/RahulSinghParmar/maintenance-page)**
 - Daily work: **Cisco · Brocade · Sophos · Windows Server · Linux · PRTG · Domotz**
-- Current path: **AWS networking · infrastructure automation · security engineering**
+- Current path: **AWS networking · PowerShell/Python automation · security engineering**
 - Homelab: **Docker · Nextcloud · Jellyfin · Mattermost · self-hosting**
 - Fun fact: **I enjoy debugging the entire path—from a packet on the wire to the code serving the response.**
 
@@ -62,11 +61,11 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 
 ## `~/` toolbox
 
-<img src="https://skillicons.dev/icons?i=python,java,js,html,css,docker,linux,aws,git,github,vscode,mysql&amp;perline=12" alt="Python, Java, JavaScript, HTML, CSS, Docker, Linux, AWS, Git, GitHub, VS Code, and MySQL">
+<img src="https://skillicons.dev/icons?i=powershell,python,java,js,html,css,docker,linux,aws,git,github,vscode&amp;perline=12" alt="PowerShell, Python, Java, JavaScript, HTML, CSS, Docker, Linux, AWS, Git, GitHub, and VS Code">
 
 <br>
 
-<sub><strong>daily drivers</strong> · Cisco · Sophos · Windows Server · Active Directory · Linux · PRTG · Docker · GitHub</sub>
+<sub><strong>daily drivers</strong> · Cisco · Sophos · Windows Server · Active Directory · Linux · PowerShell · PRTG · Docker · GitHub</sub>
 
 <br><br>
 
@@ -79,7 +78,7 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 **Security:** Sophos Firewall · Sophos Endpoint · OpenVAS · Nessus · vulnerability assessment<br>
 **Systems:** Windows Server · Active Directory · Linux · virtualization · data center operations<br>
 **Cloud:** AWS · EC2 · IAM · VPC · cloud networking<br>
-**Development:** Python · Java · JavaScript · SQL · Git · GitHub · Docker
+**Automation &amp; development:** PowerShell · Python · Java · JavaScript · SQL · Git · GitHub · Docker
 
 </details>
 
@@ -224,18 +223,6 @@ The lab is where I practice infrastructure ownership end to end: networking, acc
 
 ---
 
-## `~/` notes from the field
-
-<!-- BLOG-POST-LIST:START -->
-- [C Programming](https://rahulsinghparmar.hashnode.dev/c-programming)
-- [What is JAVA](https://rahulsinghparmar.hashnode.dev/what-is-java)
-- [Programming](https://rahulsinghparmar.hashnode.dev/programming)
-- [Web Development](https://rahulsinghparmar.hashnode.dev/web-development)
-- [Security](https://rahulsinghparmar.hashnode.dev/security)
-<!-- BLOG-POST-LIST:END -->
-
----
-
 <div align="center">
 
 ## `~/` now playing
@@ -267,7 +254,6 @@ I’m growing toward infrastructure and cloud roles where I can combine **networ
 <a href="https://www.linkedin.com/in/rahulsinghparmar4/">LinkedIn</a> ·
 <a href="https://github.com/RahulSinghParmar">GitHub</a> ·
 <a href="https://github.com/RahulSinghParmar/Portfolio">Portfolio</a> ·
-<a href="https://rahulsinghparmar.hashnode.dev/">Hashnode</a> ·
 <a href="https://learn.microsoft.com/en-us/users/rahulsinghparmar-4681/">Microsoft Learn</a>
 
 <br><br>

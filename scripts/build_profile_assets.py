@@ -53,6 +53,7 @@ LANGUAGE_COLORS = {
     "CSS": "#563d7c",
     "Python": "#3572A5",
     "Java": "#b07219",
+    "PowerShell": "#012456",
     "TeX": "#3D6117",
     "Shell": "#89e051",
     "Lua": "#000080",

@@ -12,7 +12,6 @@ on:
       - "assets/skills.json"
       - "scripts/build_profile_assets.py"
       - "scripts/generate_isocalendar.py"
-      - "scripts/update_blog.py"
       - ".github/workflows/profile-assets.yml"
 
 permissions:
@@ -38,10 +37,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/build_profile_assets.py --fetch
-
-      - name: Refresh Hashnode posts
-        continue-on-error: true
-        run: python scripts/update_blog.py
 
       - name: Validate generated profile
         run: python scripts/validate_profile.py
