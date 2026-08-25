@@ -1,0 +1,46 @@
+name: Validate profile
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "scripts/**"
+      - "docs/**"
+      - ".github/workflows/**"
+      - ".gitattributes"
+      - ".gitignore"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "assets/**"
+      - "scripts/**"
+      - "docs/**"
+      - ".github/workflows/**"
+      - ".gitattributes"
+      - ".gitignore"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-profile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Validate README and assets
+        run: python scripts/validate_profile.py

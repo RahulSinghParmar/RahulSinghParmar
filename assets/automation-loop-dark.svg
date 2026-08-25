@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="190" viewBox="0 0 1000 190" role="img" aria-label="Automation engineering feedback loop">
+  <title>Automation engineering feedback loop</title>
+  <rect width="1000" height="190" fill="#0d1117"/>
+  <g font-family="JetBrains Mono, Consolas, monospace">
+    <text x="28" y="29" fill="#8b949e" font-size="12">$ ./keep-systems-reliable --continuous</text>
+    <path id="automation-path" d="M90 84 H910" stroke="#30363d" stroke-width="2"/>
+    <circle cx="90" cy="84" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="90" cy="84" r="4" fill="#39d353"/><text x="90" y="119" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">OBSERVE</text><circle cx="290" cy="84" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="290" cy="84" r="4" fill="#39d353"/><text x="290" y="119" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">DETECT</text><circle cx="500" cy="84" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="500" cy="84" r="4" fill="#39d353"/><text x="500" y="119" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">AUTOMATE</text><circle cx="710" cy="84" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="710" cy="84" r="4" fill="#39d353"/><text x="710" y="119" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">RECOVER</text><circle cx="910" cy="84" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="910" cy="84" r="4" fill="#39d353"/><text x="910" y="119" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">LEARN</text>
+    <circle r="7" fill="#39d353" opacity="0"><animate attributeName="opacity" from="0" to="1" dur=".1s" fill="freeze"/><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#automation-path"/></animateMotion></circle>
+    <text x="28" y="164" fill="#39d353" font-size="12">status: operational</text>
+    <text x="972" y="164" text-anchor="end" fill="#8b949e" font-size="10">01100001 01110101 01110100 01101111 01101101 01100001 01110100 01100101</text>
+  </g>
+</svg>

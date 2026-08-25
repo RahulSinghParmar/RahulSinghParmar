@@ -294,3 +294,18 @@ obj/
 .packages
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij,webstorm,xamarinstudio,visualstudiocode,git,data
+
+# Local portrait source files (generated SVG is safe to publish)
+photo.png
+photome.png
+portrait-cutout-source.png
+
+# Local generator caches
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+assets/contributions-last.json
+assets/repos-public.json

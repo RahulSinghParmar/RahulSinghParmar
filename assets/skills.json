@@ -1,0 +1,13 @@
+{
+  "title": "Current focus radar",
+  "subtitle": "Infrastructure depth + weekend development",
+  "skills": [
+    { "label": "Networking", "value": 95 },
+    { "label": "Infrastructure", "value": 90 },
+    { "label": "Security", "value": 85 },
+    { "label": "Systems", "value": 84 },
+    { "label": "Cloud / AWS", "value": 70 },
+    { "label": "Development", "value": 72 },
+    { "label": "Homelab", "value": 88 }
+  ]
+}
