@@ -52,8 +52,7 @@ RahulSinghParmar/
 │   ├── infrastructure-banner-{light,dark}.svg
 │   ├── automation-loop-{light,dark}.svg
 │   ├── metrics.isocalendar.svg  # dark/GitHub default name
-│   ├── metrics.isocalendar-light.svg
-│   └── spotify-connect.svg
+│   └── metrics.isocalendar-light.svg
 ├── scripts/
 │   ├── build_profile_assets.py
 │   ├── generate_isocalendar.py
@@ -98,7 +97,7 @@ The generator reconstructs transparency from the isolated local source, emits no
 | GitHub data refresh | GitHub REST API with built-in token | Three retries, then renders cached snapshot |
 | Contribution calendar | Public contribution API | Three retries; existing checked-in calendar remains visible if refresh fails |
 | Contribution snake | `output` branch | Existing SVG remains available if a scheduled generation fails |
-| Spotify | Local animated fallback | No broken live card before OAuth is restored |
+| Spotify | Theme-matched hosted live SVG | Visible text and link remain if the remote card is temporarily unavailable |
 | Typing line, toolbox, social badges, visitor counter | Small hosted SVG requests | Nonessential decoration; core content remains readable if unavailable |
 
 There are no shared GitHub-stats, streak-stats, trophy, activity-card, or top-language rendering services in the critical path.

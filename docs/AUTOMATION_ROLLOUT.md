@@ -40,15 +40,17 @@ The profile becomes live when the pull request is merged into the special `Rahul
 
 If a workflow cannot push, open **Settings → Actions → General → Workflow permissions** and enable **Read and write permissions**.
 
-## Spotify activation
+## Spotify binding
 
-Spotify is the only manual binding still required. The former token is revoked, so the README intentionally uses a healthy local fallback until authorization succeeds.
+Spotify is active through a theme-matched hosted SVG card. Only the public card UID is stored in the README; Spotify access and refresh tokens are not repository secrets.
+
+If Spotify access is revoked or expires:
 
 1. Open `https://spotify-github-profile.kittinanx.com/api/login`.
 2. Sign in and approve read-only access to currently playing and recently played music.
-3. Copy the generated Markdown or the `uid` value from the success page.
-4. Confirm that the generated `api/view` endpoint returns an SVG card.
-5. Replace `assets/spotify-connect.svg` in the README only after that endpoint is verified.
+3. Copy the generated `uid` value from the success page.
+4. Verify both theme-matched `api/view` endpoints return `image/svg+xml`.
+5. Update the README only if the generated UID changed.
 
 Do not commit Spotify client secrets or refresh tokens. A hosted card requires no repository secret after the one-time OAuth connection.
 
@@ -59,7 +61,7 @@ Do not commit Spotify client secrets or refresh tokens. A hosted card requires n
 | GitHub cards, radars, language mix, projects | GitHub REST API | Built-in `GITHUB_TOKEN` only |
 | 3D contribution calendar | Public contribution history API | No |
 | Snake | GitHub Actions + `output` branch | Built-in `GITHUB_TOKEN` only |
-| Spotify hosted card | One-time Spotify OAuth | No repository secret |
+| Spotify hosted card | One-time Spotify OAuth; public card UID in README | No repository secret |
 | Portrait generation | Private local source photo | No; source stays ignored |
 
 ## Failure and rollback behavior

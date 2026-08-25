@@ -236,11 +236,15 @@ The lab is where I practice infrastructure ownership end to end: networking, acc
 
 ## `~/` now playing
 
-<a href="https://open.spotify.com/user/ac5f94de8d0f49e49fb8a8e494518dd4a">
-  <img src="assets/spotify-connect.svg" width="640" alt="Spotify activity connection preview">
+<a href="https://spotify-github-profile.kittinanx.com/api/view?uid=opjw6gyfksmzlxds9tsvib5sa&amp;redirect=true">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://spotify-github-profile.kittinanx.com/api/view?uid=opjw6gyfksmzlxds9tsvib5sa&amp;cover_image=true&amp;theme=default&amp;show_offline=true&amp;background_color=0d1117&amp;bar_color=39d353">
+  <source media="(prefers-color-scheme: light)" srcset="https://spotify-github-profile.kittinanx.com/api/view?uid=opjw6gyfksmzlxds9tsvib5sa&amp;cover_image=true&amp;theme=default&amp;show_offline=true&amp;background_color=ffffff&amp;bar_color=1a7f37">
+  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=opjw6gyfksmzlxds9tsvib5sa&amp;cover_image=true&amp;theme=default&amp;show_offline=true&amp;background_color=ffffff&amp;bar_color=1a7f37" width="440" alt="Rahul's live Spotify activity">
+</picture>
 </a>
 
-<sub>The local fallback keeps this section healthy until the one-time Spotify authorization is renewed.</sub>
+<sub>Live Spotify activity · current track while listening, offline state when playback stops</sub>
 
 </div>
 
