@@ -14,10 +14,10 @@ The public README deliberately borrows the supplied inspiration profile's strong
 GitHub profile READMEs cannot ship custom CSS media queries for the whole document. The profile therefore uses native HTML behavior that GitHub reliably supports:
 
 - Every theme-sensitive visual uses `<picture>` with explicit dark and light `<source>` files.
-- Radar and project images are inline fixed-width images with GitHub's `max-width: 100%` behavior. They pair on wide screens and wrap to one full-width image on narrow screens.
-- No project-card or radar table locks the page into two columns on mobile.
+- The two radars remain side by side on desktop. Selected projects use a compact two-by-two grid to reduce page length and preserve direct repository links.
+- The profile is desktop-first while every SVG retains a scalable `viewBox` and GitHub's `max-width: 100%` protection against viewport overflow.
 - Full-width graphics use scalable SVG `viewBox` coordinates, so they remain sharp on retina, ultrawide, tablet, and phone displays.
-- Wide infrastructure, achievement, and automation diagrams switch to dedicated vertical SVG variants below 600 px so labels remain readable rather than merely shrinking.
+- GitHub rewrites `<picture>` media rules for theme selection and does not preserve width breakpoints reliably. The README therefore references one compact horizontal asset per theme instead of allowing a mobile source to be selected on desktop.
 - Text remains real Markdown wherever searchability, accessibility, or recruiter scanning matters.
 - Every image has descriptive alternative text and a visible text equivalent nearby.
 
@@ -48,15 +48,11 @@ RahulSinghParmar/
 │   ├── card-stats-{light,dark}.svg
 │   ├── languages-{light,dark}.svg
 │   ├── achievements-{light,dark}.svg
-│   ├── achievements-mobile-{light,dark}.svg
 │   ├── project-*-{light,dark}.svg
 │   ├── infrastructure-banner-{light,dark}.svg
-│   ├── infrastructure-banner-mobile-{light,dark}.svg
 │   ├── automation-loop-{light,dark}.svg
-│   ├── automation-loop-mobile-{light,dark}.svg
 │   ├── metrics.isocalendar.svg  # dark/GitHub default name
-│   ├── metrics.isocalendar-light.svg
-│   └── spotify-connect.svg
+│   └── metrics.isocalendar-light.svg
 ├── scripts/
 │   ├── build_profile_assets.py
 │   ├── generate_isocalendar.py
@@ -101,17 +97,18 @@ The generator reconstructs transparency from the isolated local source, emits no
 | GitHub data refresh | GitHub REST API with built-in token | Three retries, then renders cached snapshot |
 | Contribution calendar | Public contribution API | Three retries; existing checked-in calendar remains visible if refresh fails |
 | Contribution snake | `output` branch | Existing SVG remains available if a scheduled generation fails |
-| Spotify | Local animated fallback | No broken live card before OAuth is restored |
+| Spotify | Theme-matched hosted live SVG | Visible text and link remain if the remote card is temporarily unavailable |
 | Typing line, toolbox, social badges, visitor counter | Small hosted SVG requests | Nonessential decoration; core content remains readable if unavailable |
 
 There are no shared GitHub-stats, streak-stats, trophy, activity-card, or top-language rendering services in the critical path.
 
 ## Automatic versus curated data
 
-- `card-stats`, `languages`, the right-hand language radar, project metadata, achievements, and the 3D contribution calendar refresh from public GitHub data every 12 hours.
+- `card-stats`, `languages`, the right-hand programming/scripting radar, project metadata, achievements, and the 3D contribution calendar refresh from public GitHub data every 12 hours.
 - The contribution snake refreshes daily on its own workflow and is published to the `output` branch.
 - The left-hand skill radar is self-assessed. Its SVG refreshes automatically whenever `assets/skills.json` changes, but the labels and percentages are deliberately curated rather than inferred from repository bytes.
-- PowerShell appears in the live language radar only when GitHub Linguist detects committed PowerShell files in original, non-archived repositories. The visible toolbox and automation radar can accurately describe professional PowerShell usage even when workplace scripts are private.
+- The programming/scripting radar excludes markup, styling, and documentation formats such as HTML, CSS, and TeX so they do not visually compress Java, Python, Shell, and JavaScript. Values still come from GitHub Linguist bytes in original, non-archived repositories.
+- PowerShell appears in the live programming radar only when GitHub Linguist detects at least 1 KB of committed PowerShell in those repositories. The visible toolbox and automation radar can accurately describe professional PowerShell usage even when workplace scripts are private.
 
 ## Performance decisions
 
@@ -147,8 +144,8 @@ Before merge, preview GitHub at approximately 360 px, 768 px, and desktop width 
 
 - No horizontal scrollbar.
 - Complete portrait hairline and readable face.
-- Radars wrap rather than shrink into unreadable halves.
-- Project cards wrap one per line on phones.
+- The radar pair and project grid stay within the README viewport without page-level horizontal overflow.
+- Wide diagrams scale to the available width and retain nearby text equivalents for narrow screens.
 - Text remains readable without zoom.
 - Infrastructure and automation labels remain legible.
 - Snake and contribution calendar scale without clipping.

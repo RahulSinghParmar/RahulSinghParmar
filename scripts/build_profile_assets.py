@@ -60,6 +60,9 @@ LANGUAGE_COLORS = {
     "TypeScript": "#3178c6",
 }
 
+RADAR_LANGUAGE_EXCLUSIONS = {"CSS", "HTML", "TeX", "Markdown", "Jupyter Notebook"}
+RADAR_MINIMUM_BYTES = 1_000
+
 
 def request_json(url: str, token: str | None = None, attempts: int = 3) -> Any:
     headers = {
@@ -260,6 +263,23 @@ def top_languages(data: dict[str, Any], limit: int = 7) -> list[tuple[str, int, 
     return [(name, byte_count, byte_count / total * 100) for name, byte_count in items]
 
 
+def programming_languages(data: dict[str, Any], limit: int = 7) -> list[tuple[str, int, float]]:
+    """Return substantial programming/scripting languages for the developer radar.
+
+    Markup, styling, and documentation formats stay visible in the full language
+    bars, but do not compress the programming radar's scale.
+    """
+    items = [
+        (name, byte_count)
+        for name, byte_count in data["languages"].items()
+        if name not in RADAR_LANGUAGE_EXCLUSIONS and byte_count >= RADAR_MINIMUM_BYTES
+    ]
+    items.sort(key=lambda item: item[1], reverse=True)
+    items = items[:limit]
+    total = sum(byte_count for _, byte_count in items) or 1
+    return [(name, byte_count, byte_count / total * 100) for name, byte_count in items]
+
+
 def render_language_bars(data: dict[str, Any], theme: Theme) -> str:
     width, height = 720, 192
     languages = top_languages(data, 6)
@@ -311,36 +331,6 @@ def render_achievements(data: dict[str, Any], project_count: int, theme: Theme) 
         + f'''  <g font-family="Segoe UI, Arial, sans-serif">
     <text x="450" y="24" text-anchor="middle" fill="{theme.muted}" font-size="11" letter-spacing="1.5">SIGNAL PATH · EXPERIENCE TO SHIPPED WORK</text>
     {''.join(connectors)}{''.join(nodes)}
-  </g>
-</svg>
-'''
-    )
-
-
-def render_achievements_mobile(data: dict[str, Any], project_count: int, theme: Theme) -> str:
-    width, height = 420, 520
-    items = [
-        ("4+", "years in infrastructure"),
-        ("LEAD", "network engineering"),
-        ("B.E.", "computer engineering"),
-        (str(project_count), "selected builds"),
-        (str(len(data["repos"])), "original repositories"),
-    ]
-    nodes = []
-    for index, (value, label) in enumerate(items):
-        y = 92 + index * 88
-        if index < len(items) - 1:
-            nodes.append(f'<line x1="74" y1="{y + 25}" x2="74" y2="{y + 63}" stroke="{theme.grid}" stroke-width="2"/>')
-        nodes.append(
-            f'<circle cx="74" cy="{y}" r="25" fill="{theme.background}" stroke="{theme.accent}" stroke-width="2"/>'
-            f'<text x="74" y="{y + 5}" text-anchor="middle" fill="{theme.accent}" font-size="13" font-weight="700">{html.escape(value)}</text>'
-            f'<text x="118" y="{y + 5}" fill="{theme.text}" font-size="14">{html.escape(label)}</text>'
-        )
-    return (
-        svg_open(width, height, "Career and project milestones", theme)
-        + f'''  <g font-family="Segoe UI, Arial, sans-serif">
-    <text x="210" y="30" text-anchor="middle" fill="{theme.muted}" font-size="11" letter-spacing="1.3">EXPERIENCE TO SHIPPED WORK</text>
-    {''.join(nodes)}
   </g>
 </svg>
 '''
@@ -417,42 +407,6 @@ def render_infrastructure(theme: Theme) -> str:
     )
 
 
-def render_infrastructure_mobile(theme: Theme) -> str:
-    width, height = 420, 540
-    nodes = [
-        (100, "USERS", "requests"),
-        (194, "EDGE", "DNS · VPN"),
-        (288, "NETWORK", "VLAN · routing"),
-        (382, "SYSTEMS", "Linux · Windows"),
-        (476, "CLOUD", "AWS · services"),
-    ]
-    boxes = []
-    paths = []
-    for index, (y, label, subtitle) in enumerate(nodes):
-        boxes.append(
-            f'<rect x="90" y="{y - 30}" width="240" height="60" rx="9" fill="{theme.surface}" stroke="{theme.border}"/>'
-            f'<text x="210" y="{y - 4}" text-anchor="middle" fill="{theme.accent}" font-size="14" font-weight="700">{label}</text>'
-            f'<text x="210" y="{y + 16}" text-anchor="middle" fill="{theme.muted}" font-size="12">{subtitle}</text>'
-        )
-        if index < len(nodes) - 1:
-            next_y = nodes[index + 1][0]
-            paths.append(f'<path id="mobile-link{index}" d="M210 {y + 30} V{next_y - 30}" stroke="{theme.grid}" stroke-width="2"/>')
-            paths.append(
-                f'<circle r="4" fill="{theme.accent}"><animateMotion dur="{1.6 + index * .2:.2f}s" repeatCount="indefinite"><mpath href="#mobile-link{index}"/></animateMotion></circle>'
-            )
-    return (
-        svg_open(width, height, "Infrastructure delivery path", theme)
-        + f'''  <g font-family="Segoe UI, Arial, sans-serif">
-    <text x="210" y="27" text-anchor="middle" fill="{theme.text}" font-size="17" font-weight="700">from packet to platform</text>
-    <text x="210" y="48" text-anchor="middle" fill="{theme.muted}" font-size="12">observe · secure · automate · recover</text>
-    {''.join(paths)}{''.join(boxes)}
-    <text x="210" y="526" text-anchor="middle" fill="{theme.muted}" font-size="11">monitoring + security feedback loop</text>
-  </g>
-</svg>
-'''
-    )
-
-
 def render_automation_loop(theme: Theme) -> str:
     width, height = 1000, 190
     labels = ["OBSERVE", "DETECT", "AUTOMATE", "RECOVER", "LEARN"]
@@ -480,39 +434,13 @@ def render_automation_loop(theme: Theme) -> str:
     )
 
 
-def render_automation_loop_mobile(theme: Theme) -> str:
-    width, height = 420, 520
-    labels = ["OBSERVE", "DETECT", "AUTOMATE", "RECOVER", "LEARN"]
-    ys = [94, 180, 266, 352, 438]
-    path = "M84 94 V438"
-    nodes = []
-    for y, label in zip(ys, labels):
-        nodes.append(
-            f'<circle cx="84" cy="{y}" r="13" fill="{theme.background}" stroke="{theme.accent}" stroke-width="2"/>'
-            f'<circle cx="84" cy="{y}" r="4" fill="{theme.accent}"/>'
-            f'<text x="122" y="{y + 5}" fill="{theme.text}" font-size="14" font-weight="700">{label}</text>'
-        )
-    return (
-        svg_open(width, height, "Automation engineering feedback loop", theme)
-        + f'''  <g font-family="JetBrains Mono, Consolas, monospace">
-    <text x="22" y="28" fill="{theme.muted}" font-size="11">$ ./keep-systems-reliable --continuous</text>
-    <path id="automation-mobile-path" d="{path}" stroke="{theme.grid}" stroke-width="2"/>
-    {''.join(nodes)}
-    <circle r="7" fill="{theme.accent}"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#automation-mobile-path"/></animateMotion></circle>
-    <text x="22" y="500" fill="{theme.accent}" font-size="12">status: operational · automate</text>
-  </g>
-</svg>
-'''
-    )
-
-
 def render_all(data: dict[str, Any], data_path: Path, skills_path: Path, projects_path: Path, output: Path) -> None:
     from generate_isocalendar import render as render_isocalendar
 
     skills = json.loads(skills_path.read_text(encoding="utf-8"))["skills"]
     projects = json.loads(projects_path.read_text(encoding="utf-8"))
     repo_lookup = {repo["name"].casefold(): repo for repo in data["repos"]}
-    language_items = top_languages(data, 7)
+    language_items = programming_languages(data, 7)
     language_labels = [name for name, _, _ in language_items]
     maximum = max((byte_count for _, byte_count, _ in language_items), default=1)
     language_values = [max(0.08, byte_count / maximum) for _, byte_count, _ in language_items]
@@ -524,16 +452,13 @@ def render_all(data: dict[str, Any], data_path: Path, skills_path: Path, project
         )
         write_svg(
             output / f"radar-languages-{theme_name}.svg",
-            render_radar(language_labels, language_values, "Language mix · original repos", theme),
+            render_radar(language_labels, language_values, "Programming & scripting · original repos", theme),
         )
         write_svg(output / f"card-stats-{theme_name}.svg", render_stats(data, theme))
         write_svg(output / f"languages-{theme_name}.svg", render_language_bars(data, theme))
         write_svg(output / f"achievements-{theme_name}.svg", render_achievements(data, len(projects), theme))
-        write_svg(output / f"achievements-mobile-{theme_name}.svg", render_achievements_mobile(data, len(projects), theme))
         write_svg(output / f"infrastructure-banner-{theme_name}.svg", render_infrastructure(theme))
-        write_svg(output / f"infrastructure-banner-mobile-{theme_name}.svg", render_infrastructure_mobile(theme))
         write_svg(output / f"automation-loop-{theme_name}.svg", render_automation_loop(theme))
-        write_svg(output / f"automation-loop-mobile-{theme_name}.svg", render_automation_loop_mobile(theme))
         for project in projects:
             repo = repo_lookup.get(project["repo"].casefold(), {})
             safe_name = project["repo"].casefold().replace("_", "-")

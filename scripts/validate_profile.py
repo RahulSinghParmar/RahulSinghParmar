@@ -93,9 +93,6 @@ def main() -> int:
             "automation-loop",
         ):
             check((ASSETS / f"{stem}-{theme}.svg").is_file(), f"missing theme asset: {stem}-{theme}.svg", errors)
-        for stem in ("achievements-mobile", "infrastructure-banner-mobile", "automation-loop-mobile"):
-            check((ASSETS / f"{stem}-{theme}.svg").is_file(), f"missing mobile theme asset: {stem}-{theme}.svg", errors)
-
     portrait = (ASSETS / "portrait-light.svg").read_text(encoding="utf-8")
     check("portrait-reveal" in portrait, "portrait entrance animation is missing", errors)
     check("<rect" not in portrait, "portrait must not contain a background rectangle", errors)
