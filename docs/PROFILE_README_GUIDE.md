@@ -44,7 +44,7 @@ RahulSinghParmar/
 │   ├── projects.json            # selected project content
 │   ├── skills.json              # editable self-assessed radar values
 │   ├── portrait-{light,dark}.svg
-│   ├── radar-{skills,languages}-{light,dark}.svg
+│   ├── radar-{skills,development}-{light,dark}.svg
 │   ├── card-stats-{light,dark}.svg
 │   ├── languages-{light,dark}.svg
 │   ├── achievements-{light,dark}.svg
@@ -104,11 +104,11 @@ There are no shared GitHub-stats, streak-stats, trophy, activity-card, or top-la
 
 ## Automatic versus curated data
 
-- `card-stats`, `languages`, the right-hand programming/scripting radar, project metadata, achievements, and the 3D contribution calendar refresh from public GitHub data every 12 hours.
+- `card-stats`, `languages`, the right-hand development radar's GitHub evidence layer, project metadata, achievements, and the 3D contribution calendar refresh from public GitHub data every 12 hours.
 - The contribution snake refreshes daily on its own workflow and is published to the `output` branch.
 - The left-hand skill radar is self-assessed. Its SVG refreshes automatically whenever `assets/skills.json` changes, but the labels and percentages are deliberately curated rather than inferred from repository bytes.
-- The programming/scripting radar excludes markup, styling, and documentation formats such as HTML, CSS, and TeX so they do not visually compress Java, Python, Shell, and JavaScript. Values still come from GitHub Linguist bytes in original, non-archived repositories.
-- PowerShell appears in the live programming radar only when GitHub Linguist detects at least 1 KB of committed PowerShell in those repositories. The visible toolbox and automation radar can accurately describe professional PowerShell usage even when workplace scripts are private.
+- The development trajectory overlays two signals instead of blending them into an ambiguous percentage: curated expertise from `assets/skills.json` and log-scaled GitHub Linguist bytes from original, non-archived repositories.
+- The seven trajectories are PowerShell, Python, Java, Shell, JavaScript, SQL, and HTML/CSS. GitHub evidence changes automatically as those language bytes change, while expertise values remain deliberate and reviewable.
 
 ## Performance decisions
 
