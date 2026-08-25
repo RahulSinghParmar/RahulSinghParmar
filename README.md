@@ -94,13 +94,13 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
   <img src="assets/radar-skills-light.svg" width="400" alt="Self-assessed skill radar">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-languages-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-languages-light.svg">
-  <img src="assets/radar-languages-light.svg" width="400" alt="Language radar generated from original public repositories">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-development-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-development-light.svg">
+  <img src="assets/radar-development-light.svg" width="400" alt="Development trajectory comparing expertise with public GitHub evidence">
 </picture>
 
 <br>
-<sub>Left: editable focus map · Right: live programming and scripting bytes from original, non-archived repositories</sub>
+<sub>Left: infrastructure focus · Right: self-assessed development expertise overlaid with live public GitHub evidence</sub>
 
 </div>
 

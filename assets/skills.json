@@ -9,5 +9,14 @@
     { "label": "Cloud / AWS", "value": 70 },
     { "label": "Automation / PS", "value": 78 },
     { "label": "Homelab", "value": 88 }
+  ],
+  "development": [
+    { "label": "PowerShell", "expertise": 82, "github_languages": ["PowerShell"] },
+    { "label": "Python", "expertise": 78, "github_languages": ["Python"] },
+    { "label": "Java", "expertise": 75, "github_languages": ["Java"] },
+    { "label": "Shell", "expertise": 76, "github_languages": ["Shell"] },
+    { "label": "JavaScript", "expertise": 68, "github_languages": ["JavaScript"] },
+    { "label": "SQL", "expertise": 66, "github_languages": ["SQL", "PLpgSQL", "TSQL"] },
+    { "label": "HTML / CSS", "expertise": 72, "github_languages": ["HTML", "CSS"] }
   ]
 }

@@ -60,8 +60,7 @@ LANGUAGE_COLORS = {
     "TypeScript": "#3178c6",
 }
 
-RADAR_LANGUAGE_EXCLUSIONS = {"CSS", "HTML", "TeX", "Markdown", "Jupyter Notebook"}
-RADAR_MINIMUM_BYTES = 1_000
+SIGNAL_COLORS = {"dark": "#58a6ff", "light": "#0969da"}
 
 
 def request_json(url: str, token: str | None = None, attempts: int = 3) -> Any:
@@ -158,7 +157,15 @@ def points_attribute(points: list[tuple[float, float]]) -> str:
     return " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
 
 
-def render_radar(labels: list[str], values: list[float], title: str, theme: Theme) -> str:
+def render_radar(
+    labels: list[str],
+    values: list[float],
+    title: str,
+    theme: Theme,
+    secondary_values: list[float] | None = None,
+    primary_label: str = "",
+    secondary_label: str = "",
+) -> str:
     width, height = 540, 500
     cx, cy, radius = 270, 260, 158
     angles = [-math.pi / 2 + 2 * math.pi * index / len(labels) for index in range(len(labels))]
@@ -189,13 +196,35 @@ def render_radar(labels: list[str], values: list[float], title: str, theme: Them
     nodes = "".join(
         f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{theme.accent}"/>' for x, y in data
     )
+    secondary_markup = ""
+    legend_markup = ""
+    primary_opacity = 0.76
+    if secondary_values is not None:
+        secondary_color = SIGNAL_COLORS[theme.name]
+        secondary_data = radar_points(secondary_values, cx, cy, radius)
+        secondary_nodes = "".join(
+            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{secondary_color}"/>'
+            for x, y in secondary_data
+        )
+        secondary_markup = (
+            f'<polygon points="{points_attribute(secondary_data)}" fill="{secondary_color}" fill-opacity="0.12" '
+            f'stroke="{secondary_color}" stroke-width="2" stroke-dasharray="5 4"/>{secondary_nodes}'
+            "\n    "
+        )
+        primary_opacity = 0.38
+        legend_markup = (
+            f'<line x1="120" y1="478" x2="146" y2="478" stroke="{theme.accent}" stroke-width="3"/>'
+            f'<text x="154" y="482" fill="{theme.muted}" font-size="11">{html.escape(primary_label)}</text>'
+            f'<line x1="310" y1="478" x2="336" y2="478" stroke="{secondary_color}" stroke-width="2" stroke-dasharray="5 4"/>'
+            f'<text x="344" y="482" fill="{theme.muted}" font-size="11">{html.escape(secondary_label)}</text>'
+        )
     return (
         svg_open(width, height, title, theme)
         + f'''  <g font-family="Segoe UI, Arial, sans-serif">
     <text x="270" y="30" text-anchor="middle" fill="{theme.text}" font-size="17" font-weight="700">{html.escape(title)}</text>
     {''.join(grid)}{''.join(axes)}
-    <polygon points="{points_attribute(data)}" fill="{theme.accent_fill}" fill-opacity="0.76" stroke="{theme.accent}" stroke-width="2.5"/>
-    {nodes}{''.join(label_markup)}
+    {secondary_markup}<polygon points="{points_attribute(data)}" fill="{theme.accent_fill}" fill-opacity="{primary_opacity}" stroke="{theme.accent}" stroke-width="2.5"/>
+    {nodes}{''.join(label_markup)}{legend_markup}
   </g>
 </svg>
 '''
@@ -259,23 +288,6 @@ def render_stats(data: dict[str, Any], theme: Theme) -> str:
 
 def top_languages(data: dict[str, Any], limit: int = 7) -> list[tuple[str, int, float]]:
     items = sorted(data["languages"].items(), key=lambda item: item[1], reverse=True)[:limit]
-    total = sum(byte_count for _, byte_count in items) or 1
-    return [(name, byte_count, byte_count / total * 100) for name, byte_count in items]
-
-
-def programming_languages(data: dict[str, Any], limit: int = 7) -> list[tuple[str, int, float]]:
-    """Return substantial programming/scripting languages for the developer radar.
-
-    Markup, styling, and documentation formats stay visible in the full language
-    bars, but do not compress the programming radar's scale.
-    """
-    items = [
-        (name, byte_count)
-        for name, byte_count in data["languages"].items()
-        if name not in RADAR_LANGUAGE_EXCLUSIONS and byte_count >= RADAR_MINIMUM_BYTES
-    ]
-    items.sort(key=lambda item: item[1], reverse=True)
-    items = items[:limit]
     total = sum(byte_count for _, byte_count in items) or 1
     return [(name, byte_count, byte_count / total * 100) for name, byte_count in items]
 
@@ -437,13 +449,22 @@ def render_automation_loop(theme: Theme) -> str:
 def render_all(data: dict[str, Any], data_path: Path, skills_path: Path, projects_path: Path, output: Path) -> None:
     from generate_isocalendar import render as render_isocalendar
 
-    skills = json.loads(skills_path.read_text(encoding="utf-8"))["skills"]
+    skills_config = json.loads(skills_path.read_text(encoding="utf-8"))
+    skills = skills_config["skills"]
+    development = skills_config["development"]
     projects = json.loads(projects_path.read_text(encoding="utf-8"))
     repo_lookup = {repo["name"].casefold(): repo for repo in data["repos"]}
-    language_items = programming_languages(data, 7)
-    language_labels = [name for name, _, _ in language_items]
-    maximum = max((byte_count for _, byte_count, _ in language_items), default=1)
-    language_values = [max(0.08, byte_count / maximum) for _, byte_count, _ in language_items]
+    development_labels = [item["label"] for item in development]
+    expertise_values = [item["expertise"] / 100 for item in development]
+    github_byte_counts = [
+        sum(int(data["languages"].get(language, 0)) for language in item["github_languages"])
+        for item in development
+    ]
+    maximum_github_bytes = max(github_byte_counts, default=1)
+    github_signal_values = [
+        math.log1p(byte_count) / math.log1p(maximum_github_bytes) if byte_count else 0.04
+        for byte_count in github_byte_counts
+    ]
 
     for theme_name, theme in THEMES.items():
         write_svg(
@@ -451,8 +472,16 @@ def render_all(data: dict[str, Any], data_path: Path, skills_path: Path, project
             render_radar([skill["label"] for skill in skills], [skill["value"] / 100 for skill in skills], "Skill radar", theme),
         )
         write_svg(
-            output / f"radar-languages-{theme_name}.svg",
-            render_radar(language_labels, language_values, "Programming & scripting · original repos", theme),
+            output / f"radar-development-{theme_name}.svg",
+            render_radar(
+                development_labels,
+                expertise_values,
+                "Development trajectory",
+                theme,
+                secondary_values=github_signal_values,
+                primary_label="expertise",
+                secondary_label="public GitHub signal",
+            ),
         )
         write_svg(output / f"card-stats-{theme_name}.svg", render_stats(data, theme))
         write_svg(output / f"languages-{theme_name}.svg", render_language_bars(data, theme))

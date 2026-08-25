@@ -85,7 +85,7 @@ def main() -> int:
         for stem in (
             "portrait",
             "radar-skills",
-            "radar-languages",
+            "radar-development",
             "card-stats",
             "languages",
             "achievements",
@@ -122,6 +122,33 @@ def main() -> int:
             check(isinstance(value, (int, float)) and 0 <= value <= 100, f"invalid skill value: {skill}", errors)
             labels.append(str(skill.get("label", "")).casefold())
         check(len(labels) == len(set(labels)), "skill labels must be unique", errors)
+
+        development = skills.get("development")
+        check(isinstance(development, list) and 5 <= len(development) <= 8, "development radar needs 5-8 trajectories", errors)
+        if isinstance(development, list):
+            development_labels: list[str] = []
+            for trajectory in development:
+                check(isinstance(trajectory, dict), "each development trajectory must be an object", errors)
+                if not isinstance(trajectory, dict):
+                    continue
+                expertise = trajectory.get("expertise")
+                github_languages = trajectory.get("github_languages")
+                check(
+                    isinstance(expertise, (int, float)) and 0 <= expertise <= 100,
+                    f"invalid development expertise: {trajectory}",
+                    errors,
+                )
+                check(
+                    isinstance(github_languages, list) and bool(github_languages),
+                    f"development trajectory needs GitHub language mappings: {trajectory}",
+                    errors,
+                )
+                development_labels.append(str(trajectory.get("label", "")).casefold())
+            check(
+                len(development_labels) == len(set(development_labels)),
+                "development trajectory labels must be unique",
+                errors,
+            )
     else:
         errors.append("assets/skills.json must contain a skills list")
 
