@@ -1,6 +1,6 @@
 # Automation rollout and publish guide
 
-The design is prepared locally. No commit or push is performed by this redesign session.
+The production profile is published through reviewed pull requests; scheduled workflows maintain the public signals after merge.
 
 ## Active workflows
 
@@ -14,12 +14,12 @@ Runs every 12 hours, manually, or when an asset generator/config changes. It:
 
 1. Checks out the profile repository.
 2. Uses Python 3.13.
-3. Fetches public profile, repository, language, and contribution data.
-4. Regenerates light/dark radars, statistics, languages, achievements, project cards, infrastructure banner, automation loop, and 3D calendar.
+3. Fetches public GitHub profile, repository, language, contribution data, and the public Hashnode RSS feed.
+4. Regenerates light/dark radars, statistics, languages, achievements, project cards, field notes, infrastructure and homelab diagrams, automation loop, and 3D calendar.
 5. Validates the complete generated profile.
 6. Commits only when generated content changed.
 
-The workflow uses the repository's built-in `GITHUB_TOKEN` with `contents: write`. No personal access token is required.
+The workflow uses the repository's built-in `GITHUB_TOKEN` with `contents: write`. Hashnode uses public RSS, so no personal access token or Hashnode API key is required.
 
 ### `snake.yml`
 
@@ -59,6 +59,7 @@ Do not commit Spotify client secrets or refresh tokens. A hosted card requires n
 | Feature | Binding | Secret required |
 | --- | --- | --- |
 | GitHub cards, radars, language mix, projects | GitHub REST API | Built-in `GITHUB_TOKEN` only |
+| Hashnode field notes | Public RSS feed + cached JSON snapshot | No |
 | 3D contribution calendar | Public contribution history API | No |
 | Snake | GitHub Actions + `output` branch | Built-in `GITHUB_TOKEN` only |
 | Spotify hosted card | One-time Spotify OAuth; public card UID in README | No repository secret |
@@ -67,6 +68,7 @@ Do not commit Spotify client secrets or refresh tokens. A hosted card requires n
 ## Failure and rollback behavior
 
 - A GitHub/API refresh retries three times and falls back to `assets/profile-data.json`.
+- A Hashnode refresh retries three times and falls back to `assets/blog-posts.json`.
 - Generated assets are committed, so the last successful visuals remain available during service outages.
 - To pause refreshes, disable the workflow from the Actions page; the profile continues serving checked-in assets.
 - To roll back a design, revert the profile commit. Do not delete the `output` branch unless the snake is intentionally removed.

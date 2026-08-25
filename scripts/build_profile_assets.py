@@ -11,14 +11,17 @@ Set GITHUB_TOKEN in CI to raise GitHub API rate limits. The token is never store
 from __future__ import annotations
 
 import argparse
+import email.utils
 import html
 import json
 import math
 import os
+import re
 import textwrap
 import time
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -27,6 +30,8 @@ from typing import Any
 
 USERNAME = "RahulSinghParmar"
 ACCENT = "#39d353"
+HASHNODE_URL = "https://rahulsinghparmar.hashnode.dev"
+HASHNODE_FEED = f"{HASHNODE_URL}/rss.xml"
 
 
 @dataclass(frozen=True)
@@ -82,6 +87,53 @@ def request_json(url: str, token: str | None = None, attempts: int = 3) -> Any:
             if attempt + 1 < attempts:
                 time.sleep(2**attempt)
     raise RuntimeError(f"Unable to fetch {url} after {attempts} attempts") from last_error
+
+
+def request_text(url: str, attempts: int = 3) -> str:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Accept": "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8",
+            "User-Agent": "RahulSinghParmar-profile-assets",
+        },
+    )
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read().decode("utf-8")
+        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError) as error:
+            last_error = error
+            if attempt + 1 < attempts:
+                time.sleep(2**attempt)
+    raise RuntimeError(f"Unable to fetch {url} after {attempts} attempts") from last_error
+
+
+def collect_hashnode_posts(feed_url: str = HASHNODE_FEED) -> list[dict[str, Any]]:
+    root = ET.fromstring(request_text(feed_url))
+    posts: list[dict[str, Any]] = []
+    content_key = "{http://purl.org/rss/1.0/modules/content/}encoded"
+    for item in root.findall("./channel/item"):
+        title = (item.findtext("title") or "").strip()
+        link = (item.findtext("link") or "").strip()
+        published_raw = (item.findtext("pubDate") or "").strip()
+        if not title or not link or not published_raw:
+            continue
+        published = email.utils.parsedate_to_datetime(published_raw).date().isoformat()
+        content = item.findtext(content_key) or item.findtext("description") or ""
+        plain_text = html.unescape(re.sub(r"<[^>]+>", " ", content))
+        word_count = len(re.findall(r"\b[\w'-]+\b", plain_text))
+        posts.append(
+            {
+                "title": title,
+                "url": link,
+                "published": published,
+                "read_minutes": max(1, math.ceil(word_count / 220)),
+            }
+        )
+    if not posts:
+        raise RuntimeError("Hashnode RSS did not contain any usable posts")
+    return sorted(posts, key=lambda post: post["published"], reverse=True)[:12]
 
 
 def collect_public_data(username: str) -> dict[str, Any]:
@@ -419,6 +471,69 @@ def render_infrastructure(theme: Theme) -> str:
     )
 
 
+def render_homelab_map(theme: Theme) -> str:
+    width, height = 1000, 238
+    nodes = [
+        (78, "EDGE", "DNS · TLS"),
+        (247, "ACCESS", "firewall · VPN"),
+        (416, "CORE", "VLAN · routing"),
+        (585, "COMPUTE", "Linux · Docker"),
+        (754, "SERVICES", "cloud · media"),
+        (923, "OBSERVE", "metrics · alerts"),
+    ]
+    boxes = []
+    for x, label, subtitle in nodes:
+        boxes.append(
+            f'<rect x="{x - 64}" y="82" width="128" height="64" rx="8" fill="{theme.surface}" stroke="{theme.border}"/>'
+            f'<text x="{x}" y="107" text-anchor="middle" fill="{theme.accent}" font-size="12" font-weight="700">{label}</text>'
+            f'<text x="{x}" y="127" text-anchor="middle" fill="{theme.muted}" font-size="10">{subtitle}</text>'
+        )
+    route = "M142 114 H183 M311 114 H352 M480 114 H521 M649 114 H690 M818 114 H859"
+    packet_path = "M142 114 H923"
+    return (
+        svg_open(width, height, "Sanitized homelab architecture and observability path", theme)
+        + f'''  <g font-family="JetBrains Mono, Consolas, monospace">
+    <text x="24" y="28" fill="{theme.accent}" font-size="12">$ homelabctl describe --public</text>
+    <text x="976" y="28" text-anchor="end" fill="{theme.muted}" font-size="11">Glance · Docker · Nextcloud · Jellyfin · Mattermost</text>
+    <path d="{route}" stroke="{theme.grid}" stroke-width="2" stroke-dasharray="5 5"/>
+    <path id="homelab-packet-path" d="{packet_path}" fill="none" stroke="none"/>
+    {''.join(boxes)}
+    <circle r="5" fill="{theme.accent}" opacity="0"><animate attributeName="opacity" from="0" to="1" dur=".1s" fill="freeze"/><animateMotion dur="5.5s" repeatCount="indefinite"><mpath href="#homelab-packet-path"/></animateMotion></circle>
+    <text x="24" y="188" fill="{theme.text}" font-size="12">policy: segment → observe → alert → recover → document</text>
+    <text x="24" y="213" fill="{theme.muted}" font-size="10">public profile exposes architecture—not credentials, addresses, or control actions</text>
+    <text x="976" y="213" text-anchor="end" fill="{theme.accent}" font-size="10">dashboard ↗</text>
+  </g>
+</svg>
+'''
+    )
+
+
+def render_blog_posts(posts: list[dict[str, Any]], theme: Theme) -> str:
+    width, height = 900, 244
+    cards = []
+    positions = [(18, 58), (459, 58), (18, 140), (459, 140)]
+    for index, (post, (x, y)) in enumerate(zip(posts[:4], positions), start=1):
+        title = textwrap.shorten(str(post["title"]), width=42, placeholder="…")
+        published = date.fromisoformat(str(post["published"])).strftime("%d %b %Y")
+        read_minutes = int(post.get("read_minutes", 1))
+        cards.append(
+            f'<line x1="{x}" y1="{y}" x2="{x}" y2="{y + 54}" stroke="{theme.accent}" stroke-width="3"/>'
+            f'<text x="{x + 15}" y="{y + 18}" fill="{theme.text}" font-size="14" font-weight="700">{html.escape(title)}</text>'
+            f'<text x="{x + 15}" y="{y + 42}" fill="{theme.muted}" font-size="10">0{index} · {published} · {read_minutes} min read</text>'
+        )
+    return (
+        svg_open(width, height, "Latest field notes from Rahul's Hashnode publication", theme)
+        + f'''  <g font-family="JetBrains Mono, Consolas, monospace">
+    <text x="18" y="26" fill="{theme.accent}" font-size="12">$ curl rahulsinghparmar.hashnode.dev/rss.xml</text>
+    <text x="882" y="26" text-anchor="end" fill="{theme.muted}" font-size="10">PUBLIC FIELD NOTES · RSS BACKED</text>
+    {''.join(cards)}
+    <text x="882" y="229" text-anchor="end" fill="{theme.accent}" font-size="10">read all articles ↗</text>
+  </g>
+</svg>
+'''
+    )
+
+
 def render_automation_loop(theme: Theme) -> str:
     width, height = 1000, 190
     labels = ["OBSERVE", "DETECT", "AUTOMATE", "RECOVER", "LEARN"]
@@ -446,13 +561,21 @@ def render_automation_loop(theme: Theme) -> str:
     )
 
 
-def render_all(data: dict[str, Any], data_path: Path, skills_path: Path, projects_path: Path, output: Path) -> None:
+def render_all(
+    data: dict[str, Any],
+    data_path: Path,
+    skills_path: Path,
+    projects_path: Path,
+    blog_path: Path,
+    output: Path,
+) -> None:
     from generate_isocalendar import render as render_isocalendar
 
     skills_config = json.loads(skills_path.read_text(encoding="utf-8"))
     skills = skills_config["skills"]
     development = skills_config["development"]
     projects = json.loads(projects_path.read_text(encoding="utf-8"))
+    blog_posts = json.loads(blog_path.read_text(encoding="utf-8"))
     repo_lookup = {repo["name"].casefold(): repo for repo in data["repos"]}
     development_labels = [item["label"] for item in development]
     expertise_values = [item["expertise"] / 100 for item in development]
@@ -487,6 +610,8 @@ def render_all(data: dict[str, Any], data_path: Path, skills_path: Path, project
         write_svg(output / f"languages-{theme_name}.svg", render_language_bars(data, theme))
         write_svg(output / f"achievements-{theme_name}.svg", render_achievements(data, len(projects), theme))
         write_svg(output / f"infrastructure-banner-{theme_name}.svg", render_infrastructure(theme))
+        write_svg(output / f"homelab-map-{theme_name}.svg", render_homelab_map(theme))
+        write_svg(output / f"blog-latest-{theme_name}.svg", render_blog_posts(blog_posts, theme))
         write_svg(output / f"automation-loop-{theme_name}.svg", render_automation_loop(theme))
         for project in projects:
             repo = repo_lookup.get(project["repo"].casefold(), {})
@@ -503,6 +628,8 @@ def main() -> None:
     parser.add_argument("--data", type=Path, default=Path("assets/profile-data.json"))
     parser.add_argument("--skills", type=Path, default=Path("assets/skills.json"))
     parser.add_argument("--projects", type=Path, default=Path("assets/projects.json"))
+    parser.add_argument("--blog-data", type=Path, default=Path("assets/blog-posts.json"))
+    parser.add_argument("--blog-feed", default=HASHNODE_FEED)
     parser.add_argument("--output", type=Path, default=Path("assets"))
     parser.add_argument("--fetch", action="store_true", help="Refresh the public data snapshot before rendering")
     arguments = parser.parse_args()
@@ -516,9 +643,16 @@ def main() -> None:
                 raise
             print(f"warning: refresh failed; rendering the last known-good snapshot: {error}")
             data = json.loads(arguments.data.read_text(encoding="utf-8"))
+        try:
+            blog_posts = collect_hashnode_posts(arguments.blog_feed)
+            arguments.blog_data.write_text(json.dumps(blog_posts, indent=2), encoding="utf-8", newline="\n")
+        except Exception as error:
+            if not arguments.blog_data.exists():
+                raise
+            print(f"warning: Hashnode refresh failed; using the cached blog snapshot: {error}")
     else:
         data = json.loads(arguments.data.read_text(encoding="utf-8"))
-    render_all(data, arguments.data, arguments.skills, arguments.projects, arguments.output)
+    render_all(data, arguments.data, arguments.skills, arguments.projects, arguments.blog_data, arguments.output)
 
 
 if __name__ == "__main__":

@@ -20,9 +20,11 @@
 
 <br>
 
-<a href="https://www.linkedin.com/in/rahulsinghparmar4/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
-<a href="https://github.com/RahulSinghParmar"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="GitHub"></a>
-<a href="https://github.com/RahulSinghParmar/Portfolio"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&amp;logo=githubpages&amp;logoColor=white" alt="Portfolio"></a>
+<a href="https://www.linkedin.com/in/rahulsinghparmar4/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
+<a href="https://rahulsinghparmar.site"><img src="https://img.shields.io/badge/Portfolio-111111?style=flat-square&amp;logo=vercel&amp;logoColor=white" alt="Portfolio"></a>
+<a href="https://rahulsinghparmar.hashnode.dev/"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=flat-square&amp;logo=hashnode&amp;logoColor=white" alt="Hashnode blog"></a>
+<a href="https://twitter.com/rahulsingh474"><img src="https://img.shields.io/badge/@rahulsingh474-000000?style=flat-square&amp;logo=x&amp;logoColor=white" alt="Rahul on X"></a>
+<a href="https://github.com/RahulSinghParmar"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub"></a>
 <img src="https://komarev.com/ghpvc/?username=RahulSinghParmar&amp;style=flat&amp;color=39d353&amp;label=profile+views" alt="Profile views">
 
 </div>
@@ -41,6 +43,7 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 - Daily work: **Cisco · Brocade · Sophos · Windows Server · Linux · PRTG · Domotz**
 - Current path: **AWS networking · PowerShell/Python automation · security engineering**
 - Homelab: **Docker · Nextcloud · Jellyfin · Mattermost · self-hosting**
+- Field notes: **[networking, security, hardware, and programming](https://rahulsinghparmar.hashnode.dev/)**
 - Fun fact: **I enjoy debugging the entire path—from a packet on the wire to the code serving the response.**
 
 <br>
@@ -108,18 +111,71 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 
 ## `~/` homelab
 
+<div align="center">
+<a href="https://dash.parmar.homes">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/homelab-map-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/homelab-map-light.svg">
+  <img src="assets/homelab-map-light.svg" width="100%" alt="Sanitized homelab architecture from edge and segmented networking through Docker services and observability">
+</picture>
+</a>
+</div>
+
+The lab is where I practice infrastructure ownership end to end: networking, access control, storage, observability, patching, backups, failure handling, and documentation someone else can follow. The public surface runs on **Glance** and presents selected operational context; addresses, credentials, and control actions are deliberately kept out of this README.
+
+**[Open the public homelab dashboard →](https://dash.parmar.homes)**
+
+---
+
+## `~/` packet route challenge
+
+<details>
+<summary><strong>Start the incident simulation</strong> · approximately 60 seconds</summary>
+
+<br>
+
 ```text
-Internet
-   └── Firewall / VPN
-         └── Segmented LAN
-               ├── Linux + Docker
-               │     ├── Nextcloud
-               │     ├── Jellyfin
-               │     └── Mattermost
-               └── monitoring → alerts → maintenance → recovery
+INC-047 · Public users report a timeout.
+Monitoring says the Docker host and application are healthy.
+DNS was changed shortly before the alert.
 ```
 
-The lab is where I practice infrastructure ownership end to end: networking, access control, storage, observability, patching, backups, failure handling, and documentation someone else can follow.
+Choose your first move:
+
+<details>
+<summary><code>A</code> · Restart every container</summary>
+
+**Not yet.** The application is healthy, and a restart destroys useful evidence without testing the failed path.
+
+</details>
+
+<details>
+<summary><code>B</code> · Expose the application port directly</summary>
+
+**Unsafe.** This bypasses segmentation and TLS while leaving the original edge-path failure unexplained.
+
+</details>
+
+<details>
+<summary><code>C</code> · Trace DNS → TLS → reverse proxy → container</summary>
+
+**Correct.** Compare the public DNS answer with the intended edge address, then test the TLS virtual host and reverse-proxy upstream independently.
+
+<details>
+<summary>Reveal the root cause</summary>
+
+The DNS record still points to the retired edge address. Restore the intended record, verify propagation, confirm the certificate and host header, then document the rollback.
+
+`flag{trace_the_whole_path}`
+
+</details>
+
+</details>
+
+<br>
+<sub>This game uses native GitHub disclosure controls—no JavaScript, tracking, or external runtime.</sub>
+
+</details>
 
 ---
 
@@ -234,6 +290,50 @@ The lab is where I practice infrastructure ownership end to end: networking, acc
 
 <div align="center">
 
+## `~/` field notes
+
+<a href="https://rahulsinghparmar.hashnode.dev/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/blog-latest-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/blog-latest-light.svg">
+  <img src="assets/blog-latest-light.svg" width="90%" alt="Latest field notes from Rahul's Hashnode publication">
+</picture>
+</a>
+
+<br>
+
+[C Programming](https://rahulsinghparmar.hashnode.dev/c-programming) ·
+[What is JAVA](https://rahulsinghparmar.hashnode.dev/what-is-java) ·
+[Programming](https://rahulsinghparmar.hashnode.dev/programming) ·
+[Web Development](https://rahulsinghparmar.hashnode.dev/web-development)
+
+<br><br>
+
+<details>
+<summary><strong>browse all 8 published notes</strong></summary>
+
+<br>
+
+[Hardware](https://rahulsinghparmar.hashnode.dev/hardware) ·
+[Internet](https://rahulsinghparmar.hashnode.dev/internet) ·
+[Multimedia](https://rahulsinghparmar.hashnode.dev/multimedia) ·
+[Security](https://rahulsinghparmar.hashnode.dev/security)<br>
+[Web Development](https://rahulsinghparmar.hashnode.dev/web-development) ·
+[Programming](https://rahulsinghparmar.hashnode.dev/programming) ·
+[What is JAVA](https://rahulsinghparmar.hashnode.dev/what-is-java) ·
+[C Programming](https://rahulsinghparmar.hashnode.dev/c-programming)
+
+</details>
+
+<br>
+<sub>RSS-backed and refreshed every 12 hours · cached repository asset remains visible if Hashnode is unavailable</sub>
+
+</div>
+
+---
+
+<div align="center">
+
 ## `~/` now playing
 
 <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=opjw6gyfksmzlxds9tsvib5sa&amp;redirect=true">
@@ -266,7 +366,9 @@ I’m growing toward infrastructure and cloud roles where I can combine **networ
 
 <a href="https://www.linkedin.com/in/rahulsinghparmar4/">LinkedIn</a> ·
 <a href="https://github.com/RahulSinghParmar">GitHub</a> ·
-<a href="https://github.com/RahulSinghParmar/Portfolio">Portfolio</a> ·
+<a href="https://rahulsinghparmar.site">Portfolio</a> ·
+<a href="https://rahulsinghparmar.hashnode.dev/">Hashnode</a> ·
+<a href="https://twitter.com/rahulsingh474">X / Twitter</a> ·
 <a href="https://learn.microsoft.com/en-us/users/rahulsinghparmar-4681/">Microsoft Learn</a>
 
 <br><br>
@@ -289,6 +391,6 @@ Each eight-bit binary group is an ASCII character. It turns an ordinary footer i
 </details>
 
 <br>
-<sub>Open to conversations about networks, infrastructure, cloud, security, homelabs, and useful weekend builds.</sub>
+<sub>Open to conversations about networks, infrastructure, cloud, security, homelabs, technical writing, and useful weekend builds.</sub>
 
 </div>
