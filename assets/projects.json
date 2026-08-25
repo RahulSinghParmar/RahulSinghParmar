@@ -1,0 +1,30 @@
+[
+  {
+    "repo": "home-server-heartbeat",
+    "title": "Home Server Heartbeat",
+    "description": "State-aware health checks and email alerts for self-hosted services.",
+    "impact": "Catches silent service failures before users report them.",
+    "stack": ["JavaScript", "Workers", "KV"]
+  },
+  {
+    "repo": "maintenance-page",
+    "title": "Infrastructure Maintenance Page",
+    "description": "A resilient edge-served 503 experience for origin and tunnel failures.",
+    "impact": "Keeps outage communication available when the origin is not.",
+    "stack": ["JavaScript", "Workers", "HTML"]
+  },
+  {
+    "repo": "Portfolio",
+    "title": "Portfolio",
+    "description": "A responsive personal portfolio built with HTML, CSS, and JavaScript.",
+    "impact": "Presents projects, background, and development interests in one place.",
+    "stack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "repo": "JAVA-Core",
+    "title": "Java Core",
+    "description": "Structured Java fundamentals, control flow, arrays, and OOP examples.",
+    "impact": "Documents the programming fundamentals behind later automation work.",
+    "stack": ["Java", "OOP", "Git"]
+  }
+]

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="520" viewBox="0 0 420 520" role="img" aria-label="Automation engineering feedback loop">
+  <title>Automation engineering feedback loop</title>
+  <rect width="420" height="520" fill="#0d1117"/>
+  <g font-family="JetBrains Mono, Consolas, monospace">
+    <text x="22" y="28" fill="#8b949e" font-size="11">$ ./keep-systems-reliable --continuous</text>
+    <path id="automation-mobile-path" d="M84 94 V438" stroke="#30363d" stroke-width="2"/>
+    <circle cx="84" cy="94" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="84" cy="94" r="4" fill="#39d353"/><text x="122" y="99" fill="#e6edf3" font-size="14" font-weight="700">OBSERVE</text><circle cx="84" cy="180" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="84" cy="180" r="4" fill="#39d353"/><text x="122" y="185" fill="#e6edf3" font-size="14" font-weight="700">DETECT</text><circle cx="84" cy="266" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="84" cy="266" r="4" fill="#39d353"/><text x="122" y="271" fill="#e6edf3" font-size="14" font-weight="700">AUTOMATE</text><circle cx="84" cy="352" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="84" cy="352" r="4" fill="#39d353"/><text x="122" y="357" fill="#e6edf3" font-size="14" font-weight="700">RECOVER</text><circle cx="84" cy="438" r="13" fill="#0d1117" stroke="#39d353" stroke-width="2"/><circle cx="84" cy="438" r="4" fill="#39d353"/><text x="122" y="443" fill="#e6edf3" font-size="14" font-weight="700">LEARN</text>
+    <circle r="7" fill="#39d353"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#automation-mobile-path"/></animateMotion></circle>
+    <text x="22" y="500" fill="#39d353" font-size="12">status: operational · automate</text>
+  </g>
+</svg>

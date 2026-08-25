@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="184" viewBox="0 0 420 184" role="img" aria-label="Home Server Heartbeat">
+  <title>Home Server Heartbeat</title>
+  <rect width="420" height="184" fill="#0d1117"/>
+  <rect x="1" y="1" width="418" height="182" rx="13" fill="none" stroke="#30363d"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="18" y="31" fill="#8b949e" font-size="14">▣</text>
+    <text x="40" y="31" fill="#39d353" font-size="16" font-weight="700">Home Server Heartbeat</text>
+    <text x="18" y="58" fill="#e6edf3" font-size="12">State-aware health checks and email alerts for self-hosted</text><text x="18" y="75" fill="#e6edf3" font-size="12">services.</text>
+    <text x="18" y="103" fill="#e6edf3" font-size="11">Why it matters · Catches silent service failures before</text><text x="18" y="119" fill="#e6edf3" font-size="11">users report them.</text>
+    <circle cx="22" cy="151" r="5" fill="#f1e05a"/>
+    <text x="34" y="155" fill="#8b949e" font-size="11">JavaScript  ·  Workers  ·  KV</text>
+    <text x="18" y="175" fill="#8b949e" font-size="11">★ 0    ⑂ 0</text>
+  </g>
+</svg>

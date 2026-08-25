@@ -1,0 +1,55 @@
+name: Refresh profile assets
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "assets/projects.json"
+      - "assets/skills.json"
+      - "scripts/build_profile_assets.py"
+      - "scripts/generate_isocalendar.py"
+      - "scripts/update_blog.py"
+      - ".github/workflows/profile-assets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme-writes
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Refresh GitHub-backed SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build_profile_assets.py --fetch
+
+      - name: Refresh Hashnode posts
+        continue-on-error: true
+        run: python scripts/update_blog.py
+
+      - name: Validate generated profile
+        run: python scripts/validate_profile.py
+
+      - name: Commit changed profile data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/profile-data.json assets/*.svg
+          git diff --cached --quiet || git commit -m "chore: refresh profile signals"
+          git push

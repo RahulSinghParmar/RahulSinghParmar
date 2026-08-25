@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="184" viewBox="0 0 420 184" role="img" aria-label="Infrastructure Maintenance Page">
+  <title>Infrastructure Maintenance Page</title>
+  <rect width="420" height="184" fill="#ffffff"/>
+  <rect x="1" y="1" width="418" height="182" rx="13" fill="none" stroke="#d0d7de"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="18" y="31" fill="#57606a" font-size="14">▣</text>
+    <text x="40" y="31" fill="#1a7f37" font-size="16" font-weight="700">Infrastructure Maintenance Page</text>
+    <text x="18" y="58" fill="#24292f" font-size="12">A resilient edge-served 503 experience for origin and</text><text x="18" y="75" fill="#24292f" font-size="12">tunnel failures.</text>
+    <text x="18" y="103" fill="#24292f" font-size="11">Why it matters · Keeps outage communication available when</text><text x="18" y="119" fill="#24292f" font-size="11">the origin is not.</text>
+    <circle cx="22" cy="151" r="5" fill="#f1e05a"/>
+    <text x="34" y="155" fill="#57606a" font-size="11">JavaScript  ·  Workers  ·  HTML</text>
+    <text x="18" y="175" fill="#57606a" font-size="11">★ 0    ⑂ 0</text>
+  </g>
+</svg>
