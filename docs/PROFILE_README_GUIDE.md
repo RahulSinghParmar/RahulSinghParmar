@@ -6,7 +6,7 @@ The public README deliberately borrows the supplied inspiration profile's strong
 
 - Identity: network and infrastructure lead who also ships weekend development projects.
 - Visual language: GitHub canvas colors, `#39d353` accents, thin borders, monospace interaction details, and restrained animation.
-- Content hierarchy: portrait → `whoami` → toolbox → proof graphs → homelab → activity → selected work → writing → career direction → connect.
+- Content hierarchy: portrait → `whoami` → toolbox → proof graphs → homelab → activity → selected work → career direction → connect.
 - Recruiter story: operations depth first, development evidence second, and cloud/automation trajectory throughout.
 
 ## Responsive and theme behavior
@@ -36,7 +36,7 @@ Theme palette:
 ```text
 RahulSinghParmar/
 ├── .github/workflows/
-│   ├── profile-assets.yml       # GitHub data, cards, radars, blog
+│   ├── profile-assets.yml       # GitHub data, cards, radars, calendar
 │   ├── snake.yml                # contribution snake/output branch
 │   └── validate-profile.yml     # pull-request and push quality gate
 ├── assets/
@@ -61,7 +61,6 @@ RahulSinghParmar/
 │   ├── build_profile_assets.py
 │   ├── generate_isocalendar.py
 │   ├── generate_portrait.py
-│   ├── update_blog.py
 │   ├── validate_profile.py
 │   └── requirements.txt
 ├── docs/
@@ -101,12 +100,18 @@ The generator reconstructs transparency from the isolated local source, emits no
 | Portrait, radars, numbers, languages, achievements, projects | Repository-hosted SVG | Always available with the README |
 | GitHub data refresh | GitHub REST API with built-in token | Three retries, then renders cached snapshot |
 | Contribution calendar | Public contribution API | Three retries; existing checked-in calendar remains visible if refresh fails |
-| Blog list | Hashnode RSS | Three retries; script exits before replacing valid content if feed is empty |
 | Contribution snake | `output` branch | Existing SVG remains available if a scheduled generation fails |
 | Spotify | Local animated fallback | No broken live card before OAuth is restored |
 | Typing line, toolbox, social badges, visitor counter | Small hosted SVG requests | Nonessential decoration; core content remains readable if unavailable |
 
 There are no shared GitHub-stats, streak-stats, trophy, activity-card, or top-language rendering services in the critical path.
+
+## Automatic versus curated data
+
+- `card-stats`, `languages`, the right-hand language radar, project metadata, achievements, and the 3D contribution calendar refresh from public GitHub data every 12 hours.
+- The contribution snake refreshes daily on its own workflow and is published to the `output` branch.
+- The left-hand skill radar is self-assessed. Its SVG refreshes automatically whenever `assets/skills.json` changes, but the labels and percentages are deliberately curated rather than inferred from repository bytes.
+- PowerShell appears in the live language radar only when GitHub Linguist detects committed PowerShell files in original, non-archived repositories. The visible toolbox and automation radar can accurately describe professional PowerShell usage even when workplace scripts are private.
 
 ## Performance decisions
 

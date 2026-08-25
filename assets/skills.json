@@ -7,7 +7,7 @@
     { "label": "Security", "value": 85 },
     { "label": "Systems", "value": 84 },
     { "label": "Cloud / AWS", "value": 70 },
-    { "label": "Development", "value": 72 },
+    { "label": "Automation / PS", "value": 78 },
     { "label": "Homelab", "value": 88 }
   ]
 }
