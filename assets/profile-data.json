@@ -9,6 +9,15 @@
   },
   "repos": [
     {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-08-25T08:46:39Z"
+    },
+    {
       "name": "resume",
       "html_url": "https://github.com/RahulSinghParmar/resume",
       "description": "A single-page, one-column resume for software developers. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume.",
@@ -43,15 +52,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-05-05T11:03:31Z"
-    },
-    {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "CSS",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2025-04-07T08:37:22Z"
     },
     {
       "name": "css_clock",
