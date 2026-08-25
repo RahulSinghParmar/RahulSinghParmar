@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/portrait-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/portrait-light.svg">
-  <img src="./assets/portrait-light.svg" width="320" style="max-width: 100%; height: auto;" alt="Rahul Singh Parmar rendered as a transparent animated dot portrait">
+  <img src="./assets/portrait-light.svg" width="260" style="max-width: 100%; height: auto;" alt="Rahul Singh Parmar rendered as a transparent animated dot portrait">
 </picture>
 
 <br>
@@ -47,8 +47,6 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 
 <div align="center">
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/infrastructure-banner-mobile-dark.svg">
-  <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/infrastructure-banner-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/infrastructure-banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/infrastructure-banner-light.svg">
   <img src="assets/infrastructure-banner-light.svg" width="100%" alt="Animated infrastructure path from users through edge, network, systems, and cloud">
@@ -102,7 +100,7 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 </picture>
 
 <br>
-<sub>Left: editable focus map · Right: live language bytes from original, non-archived repositories</sub>
+<sub>Left: editable focus map · Right: live programming and scripting bytes from original, non-archived repositories</sub>
 
 </div>
 
@@ -168,8 +166,6 @@ The lab is where I practice infrastructure ownership end to end: networking, acc
 <br>
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/achievements-mobile-dark.svg">
-  <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/achievements-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/achievements-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/achievements-light.svg">
   <img src="assets/achievements-light.svg" width="90%" alt="Connected career and project milestones">
@@ -186,35 +182,48 @@ The lab is where I practice infrastructure ownership end to end: networking, acc
 
 ## `~/` selected work
 
+<table>
+<tr>
+<td width="50%">
 <a href="https://github.com/RahulSinghParmar/home-server-heartbeat">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-home-server-heartbeat-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/project-home-server-heartbeat-light.svg">
-  <img src="assets/project-home-server-heartbeat-light.svg" width="420" alt="Home Server Heartbeat project">
+  <img src="assets/project-home-server-heartbeat-light.svg" width="100%" alt="Home Server Heartbeat project">
 </picture>
 </a>
+</td>
+<td width="50%">
 <a href="https://github.com/RahulSinghParmar/maintenance-page">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-maintenance-page-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/project-maintenance-page-light.svg">
-  <img src="assets/project-maintenance-page-light.svg" width="420" alt="Infrastructure Maintenance Page project">
+  <img src="assets/project-maintenance-page-light.svg" width="100%" alt="Infrastructure Maintenance Page project">
 </picture>
 </a>
-
+</td>
+</tr>
+<tr>
+<td width="50%">
 <a href="https://github.com/RahulSinghParmar/Portfolio">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-portfolio-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/project-portfolio-light.svg">
-  <img src="assets/project-portfolio-light.svg" width="420" alt="Portfolio project">
+  <img src="assets/project-portfolio-light.svg" width="100%" alt="Portfolio project">
 </picture>
 </a>
+</td>
+<td width="50%">
 <a href="https://github.com/RahulSinghParmar/JAVA-Core">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-java-core-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/project-java-core-light.svg">
-  <img src="assets/project-java-core-light.svg" width="420" alt="Java Core project">
+  <img src="assets/project-java-core-light.svg" width="100%" alt="Java Core project">
 </picture>
 </a>
+</td>
+</tr>
+</table>
 
 <br>
 <sub>Cards are regenerated from GitHub metadata; stars, forks, and primary language stay current.</sub>
@@ -259,8 +268,6 @@ I’m growing toward infrastructure and cloud roles where I can combine **networ
 <br><br>
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/automation-loop-mobile-dark.svg">
-  <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/automation-loop-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/automation-loop-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/automation-loop-light.svg">
   <img src="assets/automation-loop-light.svg" width="100%" alt="Animated automation feedback loop: observe, detect, automate, recover, learn">
