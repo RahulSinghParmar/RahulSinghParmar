@@ -7,7 +7,7 @@
     <text x="40" y="31" fill="#39d353" font-size="16" font-weight="700">Portfolio</text>
     <text x="18" y="58" fill="#e6edf3" font-size="12">A responsive personal portfolio built with HTML, CSS, and</text><text x="18" y="75" fill="#e6edf3" font-size="12">JavaScript.</text>
     <text x="18" y="103" fill="#e6edf3" font-size="11">Why it matters · Presents projects, background, and</text><text x="18" y="119" fill="#e6edf3" font-size="11">development interests in one place.</text>
-    <circle cx="22" cy="151" r="5" fill="#e34c26"/>
+    <circle cx="22" cy="151" r="5" fill="#3178c6"/>
     <text x="34" y="155" fill="#8b949e" font-size="11">HTML  ·  CSS  ·  JavaScript</text>
     <text x="18" y="175" fill="#8b949e" font-size="11">★ 1    ⑂ 0</text>
   </g>

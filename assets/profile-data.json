@@ -9,13 +9,22 @@
   },
   "repos": [
     {
+      "name": "Portfolio",
+      "html_url": "https://github.com/RahulSinghParmar/Portfolio",
+      "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
+      "language": "TypeScript",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-08-31T13:09:27Z"
+    },
+    {
       "name": "RahulSinghParmar",
       "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
       "description": "Config files for my GitHub profile.",
       "language": "Python",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-30T16:41:58Z"
+      "updated_at": "2026-08-31T05:35:06Z"
     },
     {
       "name": "resume",
@@ -43,15 +52,6 @@
       "stars": 0,
       "forks": 0,
       "updated_at": "2026-08-04T21:35:56Z"
-    },
-    {
-      "name": "Portfolio",
-      "html_url": "https://github.com/RahulSinghParmar/Portfolio",
-      "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
-      "language": "HTML",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-05-05T11:03:31Z"
     },
     {
       "name": "css_clock",
@@ -217,11 +217,12 @@
     }
   ],
   "languages": {
+    "TypeScript": 98178,
+    "CSS": 385389,
+    "JavaScript": 94235,
+    "Dockerfile": 2073,
     "TeX": 97020,
-    "Dockerfile": 246,
-    "JavaScript": 92065,
-    "HTML": 257045,
-    "CSS": 333634,
+    "HTML": 239514,
     "Python": 116245,
     "Java": 105022,
     "Shell": 98278,
@@ -891,7 +892,7 @@
     {
       "date": "2026-01-10",
       "count": 2,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-01-11",
@@ -1971,7 +1972,7 @@
     {
       "date": "2026-08-14",
       "count": 2,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-08-15",
@@ -2055,8 +2056,8 @@
     },
     {
       "date": "2026-08-31",
-      "count": 0,
-      "level": 0
+      "count": 3,
+      "level": 4
     }
   ]
 }
