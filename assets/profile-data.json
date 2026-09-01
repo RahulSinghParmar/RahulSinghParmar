@@ -9,13 +9,13 @@
   },
   "repos": [
     {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
+      "name": "maintenance-page",
+      "html_url": "https://github.com/RahulSinghParmar/maintenance-page",
+      "description": "maintenance HTML directly from GitHub inside a Cloudflare Worker allows you to update your maintenance page anytime by simply committing changes to GitHub, without ever having to touch or re-deploy the Cloudflare Worker script.",
+      "language": "JavaScript",
+      "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-31T19:10:42Z"
+      "updated_at": "2026-09-01T16:19:06Z"
     },
     {
       "name": "Portfolio",
@@ -24,7 +24,16 @@
       "language": "TypeScript",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-08-31T13:09:27Z"
+      "updated_at": "2026-09-01T10:34:27Z"
+    },
+    {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-09-01T05:08:44Z"
     },
     {
       "name": "resume",
@@ -43,15 +52,6 @@
       "stars": 0,
       "forks": 0,
       "updated_at": "2026-08-05T20:35:23Z"
-    },
-    {
-      "name": "maintenance-page",
-      "html_url": "https://github.com/RahulSinghParmar/maintenance-page",
-      "description": "maintenance HTML directly from GitHub inside a Cloudflare Worker allows you to update your maintenance page anytime by simply committing changes to GitHub, without ever having to touch or re-deploy the Cloudflare Worker script.",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2026-08-04T21:35:56Z"
     },
     {
       "name": "css_clock",
@@ -217,10 +217,10 @@
     }
   ],
   "languages": {
-    "TypeScript": 98178,
-    "CSS": 385389,
-    "JavaScript": 94235,
-    "Dockerfile": 2073,
+    "JavaScript": 101220,
+    "TypeScript": 104058,
+    "CSS": 388991,
+    "Dockerfile": 1935,
     "TeX": 97020,
     "HTML": 239514,
     "Python": 116245,
@@ -2061,8 +2061,8 @@
     },
     {
       "date": "2026-09-01",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 3
     }
   ]
 }
