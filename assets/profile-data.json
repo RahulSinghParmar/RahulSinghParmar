@@ -3,11 +3,20 @@
     "login": "RahulSinghParmar",
     "name": "Rahul Parmar",
     "public_repos": 49,
-    "followers": 13,
+    "followers": 12,
     "following": 36,
     "html_url": "https://github.com/RahulSinghParmar"
   },
   "repos": [
+    {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-09-08T04:36:12Z"
+    },
     {
       "name": "Portfolio",
       "html_url": "https://github.com/RahulSinghParmar/Portfolio",
@@ -16,15 +25,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-09-07T20:14:50Z"
-    },
-    {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-09-07T17:45:25Z"
     },
     {
       "name": "maintenance-page",
