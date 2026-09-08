@@ -9,13 +9,13 @@
   },
   "repos": [
     {
-      "name": "maintenance-page",
-      "html_url": "https://github.com/RahulSinghParmar/maintenance-page",
-      "description": "maintenance HTML directly from GitHub inside a Cloudflare Worker allows you to update your maintenance page anytime by simply committing changes to GitHub, without ever having to touch or re-deploy the Cloudflare Worker script.",
-      "language": "JavaScript",
+      "name": "Portfolio",
+      "html_url": "https://github.com/RahulSinghParmar/Portfolio",
+      "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
+      "language": "TypeScript",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-09-07T06:10:35Z"
+      "updated_at": "2026-09-07T20:14:50Z"
     },
     {
       "name": "RahulSinghParmar",
@@ -24,16 +24,16 @@
       "language": "Python",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-09-07T04:41:39Z"
+      "updated_at": "2026-09-07T17:45:25Z"
     },
     {
-      "name": "Portfolio",
-      "html_url": "https://github.com/RahulSinghParmar/Portfolio",
-      "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
-      "language": "TypeScript",
+      "name": "maintenance-page",
+      "html_url": "https://github.com/RahulSinghParmar/maintenance-page",
+      "description": "maintenance HTML directly from GitHub inside a Cloudflare Worker allows you to update your maintenance page anytime by simply committing changes to GitHub, without ever having to touch or re-deploy the Cloudflare Worker script.",
+      "language": "JavaScript",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-09-01T10:34:27Z"
+      "updated_at": "2026-09-07T06:10:35Z"
     },
     {
       "name": "resume",
@@ -217,9 +217,9 @@
     }
   ],
   "languages": {
-    "JavaScript": 102426,
-    "TypeScript": 104058,
+    "TypeScript": 129584,
     "CSS": 388991,
+    "JavaScript": 119391,
     "Dockerfile": 1935,
     "TeX": 97020,
     "HTML": 239514,
@@ -2058,6 +2058,11 @@
       "date": "2026-09-07",
       "count": 1,
       "level": 2
+    },
+    {
+      "date": "2026-09-08",
+      "count": 3,
+      "level": 4
     }
   ]
 }
