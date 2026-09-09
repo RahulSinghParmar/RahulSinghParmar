@@ -9,22 +9,22 @@
   },
   "repos": [
     {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-09-08T16:40:54Z"
-    },
-    {
       "name": "Portfolio",
       "html_url": "https://github.com/RahulSinghParmar/Portfolio",
       "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
       "language": "TypeScript",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-09-07T20:14:50Z"
+      "updated_at": "2026-09-09T12:49:34Z"
+    },
+    {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-09-09T04:42:19Z"
     },
     {
       "name": "maintenance-page",
@@ -217,9 +217,10 @@
     }
   ],
   "languages": {
-    "TypeScript": 129584,
-    "CSS": 388991,
-    "JavaScript": 119391,
+    "TypeScript": 143032,
+    "CSS": 395741,
+    "JavaScript": 121913,
+    "PowerShell": 2064,
     "Dockerfile": 1935,
     "TeX": 97020,
     "HTML": 239514,
@@ -2066,8 +2067,8 @@
     },
     {
       "date": "2026-09-09",
-      "count": 0,
-      "level": 0
+      "count": 2,
+      "level": 3
     }
   ]
 }
