@@ -2,21 +2,12 @@
   "user": {
     "login": "RahulSinghParmar",
     "name": "Rahul Parmar",
-    "public_repos": 50,
+    "public_repos": 51,
     "followers": 11,
     "following": 39,
     "html_url": "https://github.com/RahulSinghParmar"
   },
   "repos": [
-    {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-21T17:12:25Z"
-    },
     {
       "name": "HomeLab-SelfHosting",
       "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
@@ -24,7 +15,25 @@
       "language": "Python",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-10-21T09:42:25Z"
+      "updated_at": "2026-10-22T14:36:41Z"
+    },
+    {
+      "name": "pagetrail-replay",
+      "html_url": "https://github.com/RahulSinghParmar/pagetrail-replay",
+      "description": "PageTrail Replay beta: local session recording, self-contained HTML and Markdown exports. Based on Webrecorder ArchiveWeb.page (AGPL-3.0-or-later).",
+      "language": "TypeScript",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-22T14:20:29Z"
+    },
+    {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-22T04:44:56Z"
     },
     {
       "name": "Portfolio",
@@ -226,15 +235,15 @@
     }
   ],
   "languages": {
-    "Python": 822825,
-    "JavaScript": 157155,
+    "Python": 892974,
+    "JavaScript": 198834,
     "PowerShell": 16127,
-    "Shell": 98782,
+    "Shell": 100085,
     "Dockerfile": 2411,
-    "TypeScript": 143032,
+    "TypeScript": 890355,
+    "HTML": 250263,
     "CSS": 395741,
     "TeX": 97020,
-    "HTML": 239514,
     "Java": 105022,
     "Ruby": 151
   },
@@ -2081,8 +2090,8 @@
     },
     {
       "date": "2026-10-22",
-      "count": 0,
-      "level": 0
+      "count": 5,
+      "level": 3
     }
   ]
 }
