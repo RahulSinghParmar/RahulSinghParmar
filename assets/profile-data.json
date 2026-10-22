@@ -9,6 +9,15 @@
   },
   "repos": [
     {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-21T17:12:25Z"
+    },
+    {
       "name": "HomeLab-SelfHosting",
       "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
       "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
@@ -16,15 +25,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-10-21T09:42:25Z"
-    },
-    {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-21T04:46:49Z"
     },
     {
       "name": "Portfolio",
@@ -2078,6 +2078,11 @@
       "date": "2026-10-21",
       "count": 3,
       "level": 2
+    },
+    {
+      "date": "2026-10-22",
+      "count": 0,
+      "level": 0
     }
   ]
 }
