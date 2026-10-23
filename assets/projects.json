@@ -3,28 +3,42 @@
     "repo": "home-server-heartbeat",
     "title": "Home Server Heartbeat",
     "description": "State-aware health checks and email alerts for self-hosted services.",
-    "impact": "Catches silent service failures before users report them.",
+    "impact": "Makes service failures and recovery visible outside the homelab.",
     "stack": ["JavaScript", "Workers", "KV"]
   },
   {
-    "repo": "maintenance-page",
-    "title": "Infrastructure Maintenance Page",
-    "description": "A resilient edge-served 503 experience for origin and tunnel failures.",
-    "impact": "Keeps outage communication available when the origin is not.",
-    "stack": ["JavaScript", "Workers", "HTML"]
+    "repo": "zsh-terminal",
+    "title": "Zsh Terminal",
+    "description": "Rebuildable macOS shell, Homebrew tools, and iTerm2 configuration.",
+    "impact": "Separates public setup from private backup and recovery.",
+    "stack": ["Shell", "Homebrew", "macOS"]
+  },
+  {
+    "repo": "HomeLab-SelfHosting",
+    "title": "HomeLab SelfHosting",
+    "description": "Experimental modules for local-first deployment and service recovery.",
+    "impact": "Prerelease: recovery evidence, not a finished general installer.",
+    "stack": ["Python", "Docker", "Recovery"]
+  },
+  {
+    "repo": "CustomPcBuild",
+    "title": "Custom PC Build",
+    "description": "Java console PC builder with compatibility checks and CSV quotes.",
+    "impact": "Tests component choices and budgets with illustrative prices.",
+    "stack": ["Java 17+", "Testing", "CSV"]
+  },
+  {
+    "repo": "css_clock",
+    "title": "Tempo Clock",
+    "description": "Responsive analog clock, world time, and accessible theme controls.",
+    "impact": "Demonstrates frontend interactions without a UI framework.",
+    "stack": ["JavaScript", "CSS", "HTML"]
   },
   {
     "repo": "Portfolio",
     "title": "Portfolio",
-    "description": "A responsive personal portfolio built with HTML, CSS, and JavaScript.",
+    "description": "A responsive professional portfolio built with Next.js and TypeScript.",
     "impact": "Presents projects, background, and development interests in one place.",
-    "stack": ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    "repo": "JAVA-Core",
-    "title": "Java Core",
-    "description": "Structured Java fundamentals, control flow, arrays, and OOP examples.",
-    "impact": "Documents the programming fundamentals behind later automation work.",
-    "stack": ["Java", "OOP", "Git"]
+    "stack": ["Next.js", "React", "TypeScript"]
   }
 ]

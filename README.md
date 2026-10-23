@@ -37,14 +37,94 @@
 $ cat about.txt
 ```
 
-Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai who builds, secures, and operates the systems behind reliable services. During the week I work across networks, infrastructure, security, Windows/Linux administration, monitoring, and data center operations. On weekends I turn operational problems into small developer tools.
+Hi, I’m **Rahul Singh Parmar**, a **Team Lead Network Engineer** in Mumbai building reliable infrastructure, homelab automation, and practical developer tools. My work connects network engineering, Windows/Linux systems, security, monitoring, and data center operations—from a packet on the wire to the code serving the response.
 
-- Building **[Home Server Heartbeat](https://github.com/RahulSinghParmar/home-server-heartbeat)** and **[Infrastructure Maintenance Page](https://github.com/RahulSinghParmar/maintenance-page)**
+- Current focus: **reproducible environments · service reliability · application-aware recovery**
 - Daily work: **Cisco · Brocade · Sophos · Windows Server · Linux · PRTG · Domotz**
 - Current path: **AWS networking · PowerShell/Python automation · security engineering**
-- Homelab: **Docker · Nextcloud · Jellyfin · Mattermost · self-hosting**
-- Field notes: **[networking, security, hardware, and programming](https://rahulsinghparmar.hashnode.dev/)**
-- Fun fact: **I enjoy debugging the entire path—from a packet on the wire to the code serving the response.**
+
+## `~/` selected work
+
+Tools built around operational problems, plus Java and frontend projects that show how I approach application development. Each repository documents its setup, tests, and limitations.
+
+<table>
+<tr>
+<td width="50%">
+<a href="https://github.com/RahulSinghParmar/home-server-heartbeat">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-home-server-heartbeat-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-home-server-heartbeat-light.svg">
+  <img src="assets/project-home-server-heartbeat-light.svg" width="100%" alt="Home Server Heartbeat: self-hosted service monitoring with persistent incidents and email alerts">
+</picture>
+</a>
+<p><strong>Reliability:</strong> Cloudflare Worker health checks, persistent incident tracking, and retryable email alerts.</p>
+<a href="https://github.com/RahulSinghParmar/home-server-heartbeat#readme">Setup and operational guidance →</a>
+</td>
+<td width="50%">
+<a href="https://github.com/RahulSinghParmar/zsh-terminal">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-zsh-terminal-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-zsh-terminal-light.svg">
+  <img src="assets/project-zsh-terminal-light.svg" width="100%" alt="Zsh Terminal: rebuildable macOS shell and developer environment">
+</picture>
+</a>
+<p><strong>Automation:</strong> Homebrew manifests, Zsh configuration, iTerm2 profiles, and private backup/recovery workflows.</p>
+<a href="https://github.com/RahulSinghParmar/zsh-terminal#readme">Restore workflow and safety boundaries →</a>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<a href="https://github.com/RahulSinghParmar/HomeLab-SelfHosting">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-homelab-selfhosting-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-homelab-selfhosting-light.svg">
+  <img src="assets/project-homelab-selfhosting-light.svg" width="100%" alt="HomeLab SelfHosting: experimental modular infrastructure and application-aware recovery">
+</picture>
+</a>
+<p><strong>Infrastructure · experimental prerelease:</strong> Offline planning and bounded service modules with application-aware recovery exercises. Not a finished general installer.</p>
+<a href="https://github.com/RahulSinghParmar/HomeLab-SelfHosting#readme">Validation evidence and support boundaries →</a>
+</td>
+<td width="50%">
+<a href="https://github.com/RahulSinghParmar/CustomPcBuild">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-custompcbuild-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-custompcbuild-light.svg">
+  <img src="assets/project-custompcbuild-light.svg" width="100%" alt="Custom PC Build: Java console application with compatibility checks, budgets, and CSV quotes">
+</picture>
+</a>
+<p><strong>Java:</strong> A tested console PC builder with compatibility checks, tax-inclusive budgets, and CSV quotes. Catalog prices are illustrative.</p>
+<a href="https://github.com/RahulSinghParmar/CustomPcBuild/releases">Download a release →</a>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<a href="https://github.com/RahulSinghParmar/css_clock">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-css-clock-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-css-clock-light.svg">
+  <img src="assets/project-css-clock-light.svg" width="100%" alt="Tempo: responsive analog clock and world-time dashboard">
+</picture>
+</a>
+<p><strong>Frontend:</strong> A vanilla JavaScript clock dashboard with world clocks, themes, responsive layouts, and accessibility features.</p>
+<a href="https://rahulsinghparmar.github.io/css_clock/">Try the live demo →</a>
+</td>
+<td width="50%">
+<a href="https://github.com/RahulSinghParmar/Portfolio">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-portfolio-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/project-portfolio-light.svg">
+  <img src="assets/project-portfolio-light.svg" width="100%" alt="Portfolio: professional background, projects, and contact information">
+</picture>
+</a>
+<p><strong>Web development:</strong> My professional background and project showcase, built with Next.js, React, and TypeScript.</p>
+<a href="https://rahulsinghparmar.site">Visit the portfolio →</a>
+</td>
+</tr>
+</table>
+
+Also building: **[Infrastructure Maintenance Page](https://github.com/RahulSinghParmar/maintenance-page)**—an edge-served HTTP 503 fallback for origin failures. More experiments: **[Matrix rain studio](https://github.com/RahulSinghParmar/rahul_matrix_js)**—a fork extended with interactive controls, PNG export, and reduced-motion support; upstream attribution is retained in the repository.
+
+If you try a project, a reproducible issue or a small documentation fix is welcome. Follow along for updates on infrastructure tooling, self-hosting, and useful weekend builds.
 
 <br>
 
@@ -87,6 +167,9 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 
 ---
 
+<details>
+<summary><strong>Skill radars</strong> · self-assessment and public GitHub evidence</summary>
+
 <div align="center">
 
 ## `~/` skill radar
@@ -106,6 +189,8 @@ Hi, I’m **Rahul Singh Parmar**—a **Team Lead Network Engineer** in Mumbai wh
 <sub>Left: infrastructure focus · Right: self-assessed development expertise overlaid with live public GitHub evidence</sub>
 
 </div>
+
+</details>
 
 ---
 
@@ -179,6 +264,9 @@ The DNS record still points to the retired edge address. Restore the intended re
 
 ---
 
+<details>
+<summary><strong>Activity and statistics</strong> · contribution calendar, language mix, and milestones</summary>
+
 <div align="center">
 
 ## `~/` contribution calendar
@@ -232,59 +320,7 @@ The DNS record still points to the retired edge address. Restore the intended re
 
 </div>
 
----
-
-<div align="center">
-
-## `~/` selected work
-
-<table>
-<tr>
-<td width="50%">
-<a href="https://github.com/RahulSinghParmar/home-server-heartbeat">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-home-server-heartbeat-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/project-home-server-heartbeat-light.svg">
-  <img src="assets/project-home-server-heartbeat-light.svg" width="100%" alt="Home Server Heartbeat project">
-</picture>
-</a>
-</td>
-<td width="50%">
-<a href="https://github.com/RahulSinghParmar/maintenance-page">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-maintenance-page-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/project-maintenance-page-light.svg">
-  <img src="assets/project-maintenance-page-light.svg" width="100%" alt="Infrastructure Maintenance Page project">
-</picture>
-</a>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<a href="https://github.com/RahulSinghParmar/Portfolio">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-portfolio-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/project-portfolio-light.svg">
-  <img src="assets/project-portfolio-light.svg" width="100%" alt="Portfolio project">
-</picture>
-</a>
-</td>
-<td width="50%">
-<a href="https://github.com/RahulSinghParmar/JAVA-Core">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/project-java-core-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/project-java-core-light.svg">
-  <img src="assets/project-java-core-light.svg" width="100%" alt="Java Core project">
-</picture>
-</a>
-</td>
-</tr>
-</table>
-
-<br>
-<sub>Cards are regenerated from GitHub metadata; stars, forks, and primary language stay current.</sub>
-
-</div>
+</details>
 
 ---
 
@@ -332,6 +368,9 @@ The DNS record still points to the retired edge address. Restore the intended re
 
 ---
 
+<details>
+<summary><strong>Now playing</strong> · a little personality outside the terminal</summary>
+
 <div align="center">
 
 ## `~/` now playing
@@ -347,6 +386,8 @@ The DNS record still points to the retired edge address. Restore the intended re
 <sub>Live Spotify activity · current track while listening, offline state when playback stops</sub>
 
 </div>
+
+</details>
 
 ---
 

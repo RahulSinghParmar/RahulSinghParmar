@@ -6,7 +6,8 @@ The public README deliberately borrows the supplied inspiration profile's strong
 
 - Identity: network and infrastructure lead who also ships weekend development projects.
 - Visual language: GitHub canvas colors, `#39d353` accents, thin borders, monospace interaction details, and restrained animation.
-- Content hierarchy: portrait → `whoami` → toolbox → proof graphs → homelab → route challenge → activity → selected work → field notes → career direction → connect.
+- Content hierarchy: portrait → short `whoami` → selected work → toolbox → optional skill radars → homelab → route challenge → optional activity → field notes → optional music → career direction → connect.
+- Lead with the problem solved and a usable project link. Keep statistics, self-assessed charts, and music available without requiring visitors to scroll past them.
 - Recruiter story: operations depth first, development evidence second, and cloud/automation trajectory throughout.
 
 ## Responsive and theme behavior
@@ -14,7 +15,7 @@ The public README deliberately borrows the supplied inspiration profile's strong
 GitHub profile READMEs cannot ship custom CSS media queries for the whole document. The profile therefore uses native HTML behavior that GitHub reliably supports:
 
 - Every theme-sensitive visual uses `<picture>` with explicit dark and light `<source>` files.
-- The two radars remain side by side on desktop. Selected projects use a compact two-by-two grid to reduce page length and preserve direct repository links.
+- The two radars remain side by side on desktop inside a disclosure. Selected projects use a two-column, three-row grid with visible text summaries and direct setup, release, or demo links.
 - The profile is desktop-first while every SVG retains a scalable `viewBox` and GitHub's `max-width: 100%` protection against viewport overflow.
 - Full-width graphics use scalable SVG `viewBox` coordinates, so they remain sharp on retina, ultrawide, tablet, and phone displays.
 - GitHub rewrites `<picture>` media rules for theme selection and does not preserve width breakpoints reliably. The README therefore references one compact horizontal asset per theme instead of allowing a mobile source to be selected on desktop.
@@ -147,7 +148,9 @@ Split into eight-bit ASCII bytes, it decodes to `automate`. The README includes 
 - Keep the exact role title `Team Lead Network Engineer` within the first screen.
 - Preserve visible terms for network engineering, infrastructure operations, network security, AWS, data center operations, Windows Server, Active Directory, Linux, VPC, EC2, IAM, monitoring, vulnerability assessment, and Docker.
 - Add verified scope metrics when disclosure is allowed: sites supported, devices managed, uptime, incidents resolved, remediation volume, or team size.
-- Pin `home-server-heartbeat`, `maintenance-page`, `Portfolio`, and `JAVA-Core` in the same order as the README.
+- Pin these six repositories in the same order as `assets/projects.json` and the README: `home-server-heartbeat`, `zsh-terminal`, `HomeLab-SelfHosting`, `CustomPcBuild`, `css_clock`, and `Portfolio`.
+- Keep `HomeLab-SelfHosting` explicitly labeled as an experimental prerelease; local recovery exercises do not establish general installer readiness, production adoption, or independent off-host recovery.
+- Keep secondary projects such as `maintenance-page` linked without expanding the main six-project grid. Identify fork-derived work such as `rahul_matrix_js` and preserve its upstream attribution.
 - Add architecture diagrams, screenshots, licenses, setup instructions, and measurable outcomes to each featured repository.
 - Link certifications only to issuer-hosted credential pages.
 
@@ -166,8 +169,8 @@ Before merge, preview GitHub at approximately 360 px, 768 px, and desktop width 
 
 ## SEO and discoverability
 
-- Recommended profile bio: `Team Lead Network Engineer | Infrastructure Operations | Network Security | AWS | Weekend Developer`.
-- Recommended profile topics: `network-engineering`, `infrastructure`, `network-security`, `aws`, `homelab`, `system-administration`, `devops`, and `automation`.
+- Recommended profile bio: `Network engineer building reliable infrastructure, homelab automation, and developer tools. Linux · AWS · Python · PowerShell.`
+- Suggested repository topics, where applicable: `network-engineering`, `infrastructure`, `network-security`, `aws`, `homelab`, `system-administration`, `devops`, and `automation`. Topics belong to repositories, not the personal profile.
 - Use concise repository descriptions that state the problem and core technology.
 - Keep the same professional name, headline, location, and links across GitHub, LinkedIn, the resume, and portfolio.
 - Publish practical notes about troubleshooting, homelab reliability, AWS networking, vulnerability management, and automation.
