@@ -9,13 +9,40 @@
   },
   "repos": [
     {
+      "name": "zsh-terminal",
+      "html_url": "https://github.com/RahulSinghParmar/zsh-terminal",
+      "description": "Rebuildable macOS shell and dev environment: Homebrew manifests, Zsh/Powerlevel10k, iTerm2 profiles, and private backup/recovery.",
+      "language": "Shell",
+      "stars": 0,
+      "forks": 0,
+      "updated_at": "2026-10-23T13:23:21Z"
+    },
+    {
+      "name": "HomeLab-SelfHosting",
+      "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
+      "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-23T13:03:35Z"
+    },
+    {
       "name": "home-server-heartbeat",
       "html_url": "https://github.com/RahulSinghParmar/home-server-heartbeat",
       "description": "Cloudflare Worker for self-hosted service health checks, persistent incident tracking, and Resend email alerts.",
       "language": "JavaScript",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-10-23T01:49:49Z"
+      "updated_at": "2026-10-23T11:55:58Z"
+    },
+    {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-23T04:49:05Z"
     },
     {
       "name": "maintenance-page",
@@ -25,15 +52,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-10-23T01:33:45Z"
-    },
-    {
-      "name": "HomeLab-SelfHosting",
-      "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
-      "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-23T01:20:54Z"
     },
     {
       "name": "css_clock",
@@ -90,15 +108,6 @@
       "updated_at": "2026-10-22T18:39:09Z"
     },
     {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-22T17:11:12Z"
-    },
-    {
       "name": "pagetrail-replay",
       "html_url": "https://github.com/RahulSinghParmar/pagetrail-replay",
       "description": "PageTrail Replay beta: local session recording, self-contained HTML and Markdown exports. Based on Webrecorder ArchiveWeb.page (AGPL-3.0-or-later).",
@@ -142,15 +151,6 @@
       "stars": 1,
       "forks": 1,
       "updated_at": "2023-01-07T18:40:19Z"
-    },
-    {
-      "name": "zsh-terminal",
-      "html_url": "https://github.com/RahulSinghParmar/zsh-terminal",
-      "description": "",
-      "language": "Shell",
-      "stars": 0,
-      "forks": 0,
-      "updated_at": "2022-12-05T07:30:22Z"
     },
     {
       "name": "blog",
@@ -235,17 +235,17 @@
     }
   ],
   "languages": {
-    "JavaScript": 216184,
-    "Python": 960751,
+    "Shell": 195109,
+    "Python": 1087406,
+    "Ruby": 555,
+    "JavaScript": 248517,
     "PowerShell": 16127,
-    "Shell": 100085,
     "Dockerfile": 2411,
     "CSS": 401198,
     "HTML": 251327,
     "Java": 99839,
     "TypeScript": 890355,
-    "TeX": 97020,
-    "Ruby": 151
+    "TeX": 97020
   },
   "contributions": [
     {
@@ -1831,12 +1831,12 @@
     {
       "date": "2026-08-31",
       "count": 3,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-09-01",
       "count": 3,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-09-02",
@@ -1871,7 +1871,7 @@
     {
       "date": "2026-09-08",
       "count": 3,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-09-09",
@@ -2086,7 +2086,7 @@
     {
       "date": "2026-10-21",
       "count": 3,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-10-22",
@@ -2095,7 +2095,7 @@
     },
     {
       "date": "2026-10-23",
-      "count": 17,
+      "count": 21,
       "level": 4
     }
   ]
