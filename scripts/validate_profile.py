@@ -72,6 +72,21 @@ def main() -> int:
     readme = README.read_text(encoding="utf-8")
 
     check("Team Lead Network Engineer" in readme, "README is missing the recruiter headline", errors)
+    for optional_tag in ("details", "summary", "table"):
+        check(
+            readme.count(f"<{optional_tag}>") == readme.count(f"</{optional_tag}>"),
+            f"README has an unbalanced <{optional_tag}> block",
+            errors,
+        )
+    sections = ["## `~/` whoami", "## `~/` selected work", "## `~/` toolbox"]
+    section_positions = [readme.find(section) for section in sections]
+    check(
+        all(position >= 0 for position in section_positions)
+        and section_positions == sorted(section_positions)
+        and readme.count(sections[1]) == 1,
+        "README must feature selected work once, immediately after the introduction and before the toolbox",
+        errors,
+    )
     for public_link in REQUIRED_PUBLIC_LINKS:
         check(public_link in readme, f"README is missing required public link: {public_link}", errors)
     check("flag{trace_the_whole_path}" in readme, "README packet-route challenge is missing its completion flag", errors)
@@ -123,6 +138,23 @@ def main() -> int:
             check(isinstance(project.get("stack"), list) and bool(project.get("stack")), f"project {index} needs a non-empty stack", errors)
             repositories.append(str(project.get("repo", "")).casefold())
         check(len(repositories) == len(set(repositories)), "project repository names must be unique", errors)
+        check(len(repositories) == 6, "feature exactly six projects to match the profile pins", errors)
+        selected_work = readme.partition("## `~/` selected work")[2].partition("## `~/` toolbox")[0]
+        card_order = re.findall(r'assets/project-([^"/]+)-light\.svg" width=', selected_work)
+        check(
+            card_order == [repo.replace("_", "-") for repo in repositories],
+            "README project card order must match assets/projects.json",
+            errors,
+        )
+        for repo in repositories:
+            for theme in ("light", "dark"):
+                asset_name = f"project-{repo.replace('_', '-')}-{theme}.svg"
+                check((ASSETS / asset_name).is_file(), f"missing project card: {asset_name}", errors)
+        check(
+            "experimental prerelease" in selected_work and "Not a finished general installer" in selected_work,
+            "selected work must state HomeLab's experimental support boundary",
+            errors,
+        )
     else:
         errors.append("assets/projects.json must contain a list")
 
