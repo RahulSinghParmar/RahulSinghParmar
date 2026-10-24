@@ -9,6 +9,24 @@
   },
   "repos": [
     {
+      "name": "HomeLab-SelfHosting",
+      "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
+      "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-23T18:22:16Z"
+    },
+    {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-10-23T17:07:08Z"
+    },
+    {
       "name": "zsh-terminal",
       "html_url": "https://github.com/RahulSinghParmar/zsh-terminal",
       "description": "Rebuildable macOS shell and dev environment: Homebrew manifests, Zsh/Powerlevel10k, iTerm2 profiles, and private backup/recovery.",
@@ -18,15 +36,6 @@
       "updated_at": "2026-10-23T13:23:21Z"
     },
     {
-      "name": "HomeLab-SelfHosting",
-      "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
-      "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-23T13:03:35Z"
-    },
-    {
       "name": "home-server-heartbeat",
       "html_url": "https://github.com/RahulSinghParmar/home-server-heartbeat",
       "description": "Cloudflare Worker for self-hosted service health checks, persistent incident tracking, and Resend email alerts.",
@@ -34,15 +43,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-10-23T11:55:58Z"
-    },
-    {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-10-23T04:49:05Z"
     },
     {
       "name": "maintenance-page",
@@ -235,12 +235,12 @@
     }
   ],
   "languages": {
-    "Shell": 195109,
-    "Python": 1087406,
-    "Ruby": 555,
+    "Python": 1155418,
     "JavaScript": 248517,
     "PowerShell": 16127,
+    "Shell": 195109,
     "Dockerfile": 2411,
+    "Ruby": 555,
     "CSS": 401198,
     "HTML": 251327,
     "Java": 99839,
@@ -1696,7 +1696,7 @@
     {
       "date": "2026-08-04",
       "count": 5,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-08-05",
@@ -2076,7 +2076,7 @@
     {
       "date": "2026-10-19",
       "count": 5,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-10-20",
@@ -2091,12 +2091,17 @@
     {
       "date": "2026-10-22",
       "count": 5,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-10-23",
-      "count": 21,
+      "count": 26,
       "level": 4
+    },
+    {
+      "date": "2026-10-24",
+      "count": 0,
+      "level": 0
     }
   ]
 }
