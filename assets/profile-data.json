@@ -9,13 +9,22 @@
   },
   "repos": [
     {
+      "name": "Portfolio",
+      "html_url": "https://github.com/RahulSinghParmar/Portfolio",
+      "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
+      "language": "TypeScript",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-11-08T12:32:43Z"
+    },
+    {
       "name": "RahulSinghParmar",
       "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
       "description": "Config files for my GitHub profile.",
       "language": "Python",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-11-07T17:44:49Z"
+      "updated_at": "2026-11-08T06:00:09Z"
     },
     {
       "name": "HomeLab-SelfHosting",
@@ -115,15 +124,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-10-22T14:20:29Z"
-    },
-    {
-      "name": "Portfolio",
-      "html_url": "https://github.com/RahulSinghParmar/Portfolio",
-      "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
-      "language": "TypeScript",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-09-09T12:49:34Z"
     },
     {
       "name": "resume",
@@ -235,16 +235,16 @@
     }
   ],
   "languages": {
-    "Python": 1604900,
-    "JavaScript": 268232,
+    "TypeScript": 884273,
+    "CSS": 401550,
+    "JavaScript": 279655,
     "PowerShell": 16127,
-    "Dockerfile": 3562,
+    "Dockerfile": 3816,
+    "Python": 1604900,
     "Shell": 195109,
     "Ruby": 555,
-    "CSS": 401198,
     "HTML": 251327,
     "Java": 99839,
-    "TypeScript": 890355,
     "TeX": 97020
   },
   "contributions": [
@@ -2070,8 +2070,8 @@
     },
     {
       "date": "2026-11-08",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 3
     }
   ]
 }
