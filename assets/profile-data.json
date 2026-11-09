@@ -9,6 +9,15 @@
   },
   "repos": [
     {
+      "name": "RahulSinghParmar",
+      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
+      "description": "Config files for my GitHub profile.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-11-08T17:55:50Z"
+    },
+    {
       "name": "Portfolio",
       "html_url": "https://github.com/RahulSinghParmar/Portfolio",
       "description": "This is my custom portfolio website made using HTML, CSS and JavaScript.",
@@ -16,15 +25,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-11-08T12:32:43Z"
-    },
-    {
-      "name": "RahulSinghParmar",
-      "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
-      "description": "Config files for my GitHub profile.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-11-08T06:00:09Z"
     },
     {
       "name": "HomeLab-SelfHosting",
@@ -2072,6 +2072,11 @@
       "date": "2026-11-08",
       "count": 4,
       "level": 3
+    },
+    {
+      "date": "2026-11-09",
+      "count": 0,
+      "level": 0
     }
   ]
 }
