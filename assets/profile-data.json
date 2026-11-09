@@ -9,13 +9,22 @@
   },
   "repos": [
     {
+      "name": "HomeLab-SelfHosting",
+      "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
+      "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated_at": "2026-11-09T13:16:44Z"
+    },
+    {
       "name": "RahulSinghParmar",
       "html_url": "https://github.com/RahulSinghParmar/RahulSinghParmar",
       "description": "Config files for my GitHub profile.",
       "language": "Python",
       "stars": 1,
       "forks": 0,
-      "updated_at": "2026-11-08T17:55:50Z"
+      "updated_at": "2026-11-09T06:27:51Z"
     },
     {
       "name": "Portfolio",
@@ -25,15 +34,6 @@
       "stars": 1,
       "forks": 0,
       "updated_at": "2026-11-08T12:32:43Z"
-    },
-    {
-      "name": "HomeLab-SelfHosting",
-      "html_url": "https://github.com/RahulSinghParmar/HomeLab-SelfHosting",
-      "description": "A local-first, modular homelab blueprint with selectable services, configurable storage, and tested recovery as the goal. Foundation release; installer in development.",
-      "language": "Python",
-      "stars": 1,
-      "forks": 0,
-      "updated_at": "2026-11-03T05:21:46Z"
     },
     {
       "name": "zsh-terminal",
@@ -235,13 +235,13 @@
     }
   ],
   "languages": {
-    "TypeScript": 884273,
-    "CSS": 401550,
+    "Python": 1633287,
     "JavaScript": 279655,
     "PowerShell": 16127,
     "Dockerfile": 3816,
-    "Python": 1604900,
     "Shell": 195109,
+    "TypeScript": 884273,
+    "CSS": 401550,
     "Ruby": 555,
     "HTML": 251327,
     "Java": 99839,
@@ -2075,8 +2075,8 @@
     },
     {
       "date": "2026-11-09",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     }
   ]
 }
